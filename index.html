@@ -380,7 +380,6 @@
             height: auto;
         }
 
-        /* Fixed aspect ratio and scaling so a.png is responsive and fills width perfectly */
         .frame-image {
             display: block;
             width: 100%;
@@ -449,23 +448,6 @@
             color: #1877F2;
         }
 
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #330008;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #a16207;
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #eab308;
-        }
-
         @media (max-width: 640px) {
             .footer-card-position {
                 top: 10% !important;
@@ -487,6 +469,18 @@
                 min-height: 550px !important;
             }
         }
+
+        .special-event-card {
+            background: linear-gradient(135deg, #f9f6ef 0%, #efe7d8 100%);
+            border: 2px solid #ca8a04;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(82, 0, 14, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .special-event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(82, 0, 14, 0.25);
+        }
     </style>
 </head>
 
@@ -495,15 +489,12 @@
 
     <!-- SCREEN 1: VIDEO INTRO ENTRY -->
     <section class="envelope-wrapper" id="envelopeWrapper">
-        <!-- Manual End-to-End Ticker with increased size -->
         <div class="ticker-wrap" aria-hidden="true">
             <div class="ticker-track">
-                <!-- Original Set -->
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति पण्डित विमल सन्मति सुंदर सागराय नमः ॥</span>
-                <!-- Exact Duplicate Set for Seamless Infinite Loop -->
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
@@ -511,30 +502,25 @@
             </div>
         </div>
 
-        <!-- Increased aa.png size & reduced gap -->
         <div class="my-4 flex justify-center">
             <img src="aa.png" width="600px" height="600px" alt="आचार्य श्री"
                 class="w-80 sm:w-[450px] h-auto object-contain drop-shadow-lg" fetchpriority="high">
         </div>
 
         <main class="w-full max-w-4xl flex flex-col items-center space-y-4 px-4 pb-8">
-            <!-- TV Section: tv.png and main.mp4 with strictly identical dimensions layout -->
             <div class="w-full flex justify-center">
                 <div class="tv-strict-container shadow-2xl rounded-2xl overflow-hidden bg-black/40 border border-white/10 cursor-pointer"
                     id="videoContainer" role="button" tabindex="0" aria-label="निमंत्रण वीडियो चलाएं">
-                    <!-- Video configured to play muted (no audio) on Screen 1 -->
                     <video id="introVideo" autoplay loop muted playsinline preload="auto">
                         <source src="main.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <!-- Television Frame Image with identical dimensions -->
                     <img src="tv.png"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x450/334155/ffffff?text=tv.png+Television+Frame';"
                         alt="Television Frame tv.png">
                 </div>
             </div>
 
-            <!-- Below TV Section: Capsule Button with white border and text "निमंत्रण खोलें" -->
             <div class="flex justify-center mt-2">
                 <button id="openInviteBtn"
                     class="px-8 py-3 rounded-full border-4 border-white bg-transparent text-white font-medium text-lg tracking-wider transition-all duration-300 hover:bg-white hover:text-black hover:scale-105 active:scale-95 shadow-lg cursor-pointer">
@@ -580,13 +566,13 @@
                             प्रदीप के वितराग पथ पर बढ़ते कदम -</span>
                         <div class="grid grid-cols-2 gap-6 pt-4">
                             <div class="border-l-4 border-gold-600 pl-4">
-                                <span class="font-sans text-3xl font-bold text-crimson-900 block">19 साल</span>
+                                <span class="font-sans text-3xl font-bold text-crimson-900 block">31 साल</span>
                                 <span
                                     class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">श्रमण
                                     दीक्षा</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
-                                <span class="font-sans text-3xl font-bold text-crimson-900 block">30 साल</span>
+                                <span class="font-sans text-3xl font-bold text-crimson-900 block">19 साल</span>
                                 <span
                                     class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">आचार्य
                                     पद</span>
@@ -607,7 +593,7 @@
                                     class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">पंचकल्याणक</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
-                                <span class="font-sans text-3xl font-bold text-crimson-900 block">300+</span>
+                                <span class="font-sans text-3xl font-bold text-crimson-900 block">850+</span>
                                 <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">तप
                                     आराधना</span>
                             </div>
@@ -685,24 +671,23 @@
                         <div class="frame-wrapper">
                             <img src="f.webp" alt="फ्रेम १" class="frame-base-img" loading="lazy">
                             <div class="frame-content">
-                                <!-- Using dynamic-logo class for fluid responsive scaling across all devices -->
                                 <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy">
                                 <div class="space-y-1 my-auto">
                                     <h3 class="frame-heading">महामस्तकाभिषेक</h3>
-                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A vessel of
-                                        blessings</p>
+                                    <h4 class="frame-heading text-lg sm:text-xl block mt-1">मूलनायक शांतिनाथ भगवान पर</h4>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A vessel of blessings</p>
                                     <div>
                                         <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
                                             नवंबर २०२६</span>
                                     </div>
                                     <div>
                                         <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सुबह
-                                            ०८:०० बजे</span>
+                                            ०7:०० बजे</span>
                                     </div>
                                 </div>
                                 <div class="w-full flex justify-center mb-9">
                                     <button
-                                        onclick="addToCalendar('महामस्तकाभिषेक', 'A vessel of blessings', '2026-11-14T08:00:00', '2026-11-14T11:00:00')"
+                                        onclick="addToCalendar('महामस्तकाभिषेक', 'A vessel of blessings', '2026-11-14T07:00:00', '2026-11-14T11:00:00')"
                                         class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
                                         <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
                                     </button>
@@ -716,10 +701,10 @@
                         <div class="frame-wrapper">
                             <img src="f.webp" alt="फ्रेम २" class="frame-base-img" loading="lazy">
                             <div class="frame-content">
-                                <!-- Using dynamic-logo class for fluid responsive scaling across all devices -->
                                 <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy">
                                 <div class="space-y-1 my-auto">
-                                    <h3 class="frame-heading">सन्मति सागर विधान</h3>
+                                    <h2 class="frame-heading">तपस्वी सम्राट आचार्य श्री</h2>
+                                    <h3 class="frame-heading text-lg sm:text-xl block mt-1">सन्मति सागर विधान</h3>
                                     <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">Lets start
                                         with blessings of guru</p>
                                     <div>
@@ -747,12 +732,12 @@
                         <div class="frame-wrapper">
                             <img src="f.webp" alt="फ्रेम ३" class="frame-base-img" loading="lazy">
                             <div class="frame-content">
-                                <!-- Using dynamic-logo class for fluid responsive scaling across all devices -->
                                 <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy">
                                 <div class="space-y-1 my-auto">
-                                    <h3 class="frame-heading"><img src="ratnatray.PNG"
-                                            style="width: 200px; height: auto; transform: translateY(-10px);"
-                                            alt="रत्नत्रय आराधना" loading="lazy"></h3>
+                                    <div class="py-2">
+                                        <img src="ratnatray.PNG" style="width: 180px; height: auto; margin: 0 auto;"
+                                            alt="रत्नत्रय आराधना" loading="lazy">
+                                    </div>
                                     <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A night to
                                         remember</p>
                                     <div>
@@ -780,7 +765,6 @@
                         <div class="frame-wrapper">
                             <img src="f.webp" alt="फ्रेम ४" class="frame-base-img" loading="lazy">
                             <div class="frame-content">
-                                <!-- Using dynamic-logo class for fluid responsive scaling across all devices -->
                                 <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy">
                                 <div class="space-y-1 my-auto">
                                     <h3 class="frame-heading">आचार्य सुन्दर सागर विधान</h3>
@@ -792,12 +776,12 @@
                                     </div>
                                     <div>
                                         <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> प्रातः
-                                            08:00 बजे</span>
+                                            07:00 बजे</span>
                                     </div>
                                 </div>
                                 <div class="w-full flex justify-center mb-9">
                                     <button
-                                        onclick="addToCalendar('आचार्य सुन्दर सागर विधान', 'The morning of forever', '2026-11-15T08:00:00', '2026-11-15T11:00:00')"
+                                        onclick="addToCalendar('आचार्य सुन्दर सागर विधान', 'The morning of forever', '2026-11-15T07:00:00', '2026-11-15T11:00:00')"
                                         class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
                                         <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
                                     </button>
@@ -811,7 +795,6 @@
                         <div class="frame-wrapper">
                             <img src="f.webp" alt="फ्रेम ५" class="frame-base-img" loading="lazy">
                             <div class="frame-content">
-                                <!-- Using dynamic-logo class for fluid responsive scaling across all devices -->
                                 <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy">
                                 <div class="space-y-1 my-auto">
                                     <h3 class="frame-heading">दिव्य जन्मोत्सव</h3>
@@ -842,7 +825,6 @@
                         <div class="frame-wrapper">
                             <img src="f.webp" alt="फ्रेम ६" class="frame-base-img" loading="lazy">
                             <div class="frame-content">
-                                <!-- Using dynamic-logo class for fluid responsive scaling across all devices -->
                                 <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy">
                                 <div class="space-y-1 my-auto">
                                     <h3 class="frame-heading">एक शाम सुन्दर गुरु के नाम</h3>
@@ -876,7 +858,6 @@
         <section id="gopuram" class="relative bg-crimson-950 text-sand-100 py-12 overflow-hidden reveal">
             <div class="photo-ticker-container">
                 <div class="photo-ticker-track">
-                    <!-- Set 1 -->
                     <div class="moving-frame-card">
                         <div class="relative p-2"><img src="1.JPG" alt="Photo 1" loading="lazy"
                                 class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
@@ -910,7 +891,6 @@
                                 class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
 
-                    <!-- Set 2: Duplicate Set for seamless loop -->
                     <div class="moving-frame-card">
                         <div class="relative p-2"><img src="1.JPG" alt="Photo 1" loading="lazy"
                                 class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
@@ -942,6 +922,52 @@
                     <div class="moving-frame-card">
                         <div class="relative p-2"><img src="8.JPG" alt="Photo 8" loading="lazy"
                                 class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: विशेष कार्यक्रम (Special Events) -->
+        <section id="special-events" class="py-24 bg-sand-200 text-stone-900 reveal relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">|| मुख्य आकर्षण (Main Highlight) ||</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-crimson-950" style="font-family: 'Tiro Devanagari Hindi', serif;">
+                        विशेष कार्यक्रम
+                    </h2>
+                    <div class="w-24 h-1 bg-gold-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="p-8 sm:p-12 rounded-3xl max-w-5xl mx-auto relative overflow-hidden" 
+                     style="background: linear-gradient(135deg, #fffcf5 0%, #f4eee1 100%); border: 3px solid #ca8a04; box-shadow: 0 25px 60px -10px rgba(82, 0, 14, 0.35), 0 0 30px rgba(202, 138, 4, 0.25);">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="text-center flex flex-col items-center justify-center space-y-5">
+                            <div class="w-full flex justify-center">
+                                <img src="ratnatray.PNG" alt="रत्नत्रय" class="w-full max-w-[340px] h-auto object-contain drop-shadow-2xl" loading="lazy">
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-3xl sm:text-4xl font-extrabold tracking-wide drop-shadow-md" style="font-family: 'Tiro Devanagari Hindi', serif; background: linear-gradient(135deg, #7a0016 0%, #b8860b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                                    प्रदीप से सुंदर जगतपूज्य दिगंबर
+                                </h3>
+                                <div class="flex flex-wrap justify-center gap-3 pt-1">
+                                    <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४ नवंबर २०२६</span>
+                                    <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सायं ०७:०० बजे</span>
+                                </div>
+                                <p class="text-stone-700 font-sans text-sm sm:text-base pt-1 font-medium">
+                                    दिव्य आशीर्वाद एवं पावन सान्निध्य में भव्य सांस्कृतिक संध्या एवं धार्मिक अनुष्ठान।
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-4">
+                            <div class="w-full max-w-[240px]">
+                                <img src="1.JPG" alt="विशेष कार्यक्रम फोटो १" class="w-full h-40 object-cover rounded-2xl border-2 border-gold-500 shadow-xl" loading="lazy">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 w-full">
+                                <img src="2.JPG" alt="विशेष कार्यक्रम फोटो २" class="w-full h-36 object-cover rounded-2xl border-2 border-gold-500 shadow-xl" loading="lazy">
+                                <img src="3.JPG" alt="विशेष कार्यक्रम फोटो ३" class="w-full h-36 object-cover rounded-2xl border-2 border-gold-500 shadow-xl" loading="lazy">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1056,7 +1082,6 @@
                     </div>
                 </div>
 
-                <!-- Neumorphic Social Media Buttons -->
                 <div class="social-links-container mt-6">
                     <a href="https://chat.whatsapp.com/Hmr6po6YXD0LbPHqNb6bgj" target="_blank" class="neu-social-btn whatsapp"
                         aria-label="WhatsApp">
@@ -1087,22 +1112,16 @@
                 const envelopeWrapper = document.getElementById('envelopeWrapper');
                 let isOpening = false;
 
-                // Keep video muted permanently on load
                 window.addEventListener('DOMContentLoaded', () => {
                     video.muted = true;
                     video.play().catch(() => { });
                 });
 
-                // Transition to Screen 2 and stop video playback completely
                 function startExperience() {
                     if (isOpening) return;
-
                     isOpening = true;
-
-                    // Stop video playing when moving to Screen 2
                     video.pause();
                     video.currentTime = 0;
-
                     envelopeWrapper.classList.add('leaving');
 
                     window.setTimeout(() => {
@@ -1113,7 +1132,6 @@
                 videoContainer.addEventListener('click', startExperience);
                 openInviteBtn.addEventListener('click', startExperience);
 
-                // Countdown Timer Logic
                 const targetDate = new Date('November 14, 2026 00:00:00').getTime();
 
                 function updateCountdown() {
@@ -1141,7 +1159,6 @@
                 setInterval(updateCountdown, 1000);
                 updateCountdown();
 
-                // Reveal Sections on Scroll
                 let revealObserver;
                 function observeSections() {
                     const sections = document.querySelectorAll('.reveal');
