@@ -64,7 +64,6 @@
             margin: 0;
             padding: 0;
             background-color: var(--maroon);
-            background-image: url('b.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -368,11 +367,9 @@
 
         .frame-container {
             position: relative;
-            isolation: isolate;
             width: 100%;
-            line-height: 0;
             overflow: hidden;
-            background: #000;
+            background: var(--maroon);
         }
 
         .background-image {
@@ -383,13 +380,13 @@
             height: auto;
         }
 
+        /* Fixed aspect ratio and scaling so a.png is responsive and fills width perfectly */
         .frame-image {
-            position: absolute;
-            inset: 0;
             display: block;
             width: 100%;
-            height: 100%;
-            object-fit: fill;
+            height: auto;
+            object-fit: cover;
+            position: relative;
             z-index: 3;
             pointer-events: none;
         }
@@ -551,10 +548,9 @@
     <div class="main-invitation show" id="mainInvite">
 
         <!-- SECTION 1: Layered Background & Royal Arch Entry -->
-        <section id="arch" class="relative min-h-[50svh] sm:min-h-screen overflow-hidden flex flex-col justify-between">
+        <section id="arch" class="relative overflow-hidden flex flex-col justify-between">
             <div class="frame-container">
-                <img src="b.png" alt="" class="background-image" fetchpriority="high">
-                <img src="a.png" alt="" class="frame-image">
+                <img src="a.png" alt="आचार्य श्री आमंत्रण" class="frame-image">
             </div>
         </section>
 
