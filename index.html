@@ -880,6 +880,57 @@
             </div>
         </section>
 
+        <!-- SECTION: REGISTRATION FORM -->
+        <section id="registration-form-section" class="py-16 bg-sand-100 text-stone-900 reveal relative overflow-hidden">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+                    <span class="text-gold-700 uppercase text-sm sm:text-base font-bold tracking-widest font-sans">|| अपनी उपस्थिति दर्ज करें ||</span>
+                    <h2 class="text-2xl sm:text-4xl font-bold text-crimson-950" style="font-family: 'Tiro Devanagari Hindi', serif;">
+                        कार्यक्रम पंजीकरण फॉर्म
+                    </h2>
+                    <div class="w-20 h-1 bg-gold-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="p-8 sm:p-10 rounded-3xl relative overflow-hidden shadow-2xl bg-gradient-to-br from-[#f9f6ef] to-[#efe7d8] border-2 border-gold-600">
+                    <form id="rsvpForm" class="space-y-6">
+                        <div>
+                            <label class="block text-crimson-950 font-bold mb-2 text-sm sm:text-base font-sans" for="formName">पूरा नाम (Name) <span class="text-red-600">*</span></label>
+                            <input type="text" id="formName" required placeholder="अपना नाम दर्ज करें"
+                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-crimson-950 font-bold mb-2 text-sm sm:text-base font-sans" for="formMobile">मोबाइल नंबर (Mobile No.) <span class="text-red-600">*</span></label>
+                                <input type="tel" id="formMobile" required pattern="[0-9]{10}" placeholder="१० अंकों का मोबाइल नंबर"
+                                    class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner">
+                            </div>
+                            <div>
+                                <label class="block text-crimson-950 font-bold mb-2 text-sm sm:text-base font-sans" for="formCity">शहर (City) <span class="text-red-600">*</span></label>
+                                <input type="text" id="formCity" required placeholder="अपने शहर का नाम"
+                                    class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-crimson-950 font-bold mb-2 text-sm sm:text-base font-sans" for="formMembers">सम्मिलित होने वाले कुल सदस्यों की संख्या (Number of Members) <span class="text-red-600">*</span></label>
+                            <input type="number" id="formMembers" required min="1" value="1"
+                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner">
+                        </div>
+
+                        <div class="text-center pt-4">
+                            <button type="submit" id="submitBtn"
+                                class="w-full sm:w-auto px-10 py-3.5 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-lg hover:from-gold-500 hover:to-gold-600 transition-all duration-300 transform hover:scale-105 active:scale-95 uppercase tracking-wider text-sm sm:text-base font-sans cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+                                सुरक्षित करें (Submit)
+                            </button>
+                        </div>
+
+                        <div id="formMessage" class="hidden text-center font-semibold text-sm pt-2 font-sans"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- SECTION 5: Venue Details & Google Map -->
         <section id="venue" class="py-24 bg-sand-100 text-stone-900 reveal">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1081,6 +1132,62 @@
             window.open(googleCalendarUrl, '_blank');
         }
     </script>
+
+    <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwaZmtfLXRUs1omJLT-pS1F3j4d8RQTVOlB4AX_KVB_vqIO3Jyxhv66PWZNLLPGuNnI8A/exec'; // Replace with your deployed Web App URL
+
+    const rsvpForm = document.getElementById('rsvpForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formMessage = document.getElementById('formMessage');
+
+    rsvpForm.addEventListener('input', function() {
+        // Form built-in validation checks if all required fields are filled and valid
+        if (rsvpForm.checkValidity()) {
+            submitBtn.removeAttribute('disabled');
+        } else {
+            submitBtn.setAttribute('disabled', 'true');
+        }
+    });
+
+    rsvpForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'सबमिट हो रहा है...';
+
+        const formData = {
+            name: document.getElementById('formName').value.trim(),
+            mobile: document.getElementById('formMobile').value.trim(),
+            city: document.getElementById('formCity').value.trim(),
+            members: document.getElementById('formMembers').value.trim()
+        };
+
+        fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors', // Required for Google Apps Script Web App endpoints
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(() => {
+            formMessage.classList.remove('hidden', 'text-red-600');
+            formMessage.classList.add('text-green-700');
+            formMessage.innerText = '✨ आपका पंजीकरण सफलतापूर्वक दर्ज हो गया है! धन्यवाद।';
+            rsvpForm.reset();
+            submitBtn.innerText = 'सुरक्षित करें (Submit)';
+            submitBtn.setAttribute('disabled', 'true');
+        })
+        .catch(error => {
+            console.error('Error!', error);
+            formMessage.classList.remove('hidden', 'text-green-700');
+            formMessage.classList.add('text-red-600');
+            formMessage.innerText = '❌ कुछ त्रुटि हुई। कृपया पुनः प्रयास करें।';
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'सुरक्षित करें (Submit)';
+        });
+    });
+</script>
 </body>
 
 </html>
