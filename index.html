@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi" class="scroll-smooth" style="color-scheme: light only !important; background-color: #590915 !important;">
+<html lang="hi" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -44,35 +44,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* Force Light Mode Overrides for All Browsers & Phones */
-        html, body {
-            color-scheme: light only !important;
-            background-color: #590915 !important;
-            color: #1c1917 !important;
+        :root {
+            color-scheme: only light;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            html,
+            body {
+                color-scheme: light;
+            }
+        }
+
+        :root {
+            --maroon: #590915;
+            --maroon-dark: #2b1105;
+            --gold: #c9a050;
+            --gold-light: #dfb36c;
+        }
+
+        html,
+        body {
+            color-scheme: only light;
+            background-color: var(--maroon) !important;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
             font-family: 'Poppins', sans-serif;
-            filter: none !important;
         }
 
-        /* Prevent auto-dark inversion on cards and boxes */
-        .relief-card, 
-        .clock-box-wrapper, 
-        .moving-frame-card, 
-        .form-box-container {
-            background: #f9f6ef !important;
-            background-color: #f9f6ef !important;
-            color: #1c1917 !important;
-            filter: none !important;
-        }
-
-        h1, h2, h3, h4, h5, h6, .frame-heading {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .frame-heading {
             font-family: 'Tiro Devanagari Hindi', serif !important;
             letter-spacing: 0.02em;
         }
 
-        p, span:not(.frame-heading), a, button, input, label {
+        p,
+        span:not(.frame-heading),
+        a,
+        button,
+        input,
+        label {
             font-family: 'Poppins', sans-serif;
         }
 
@@ -106,8 +122,12 @@
         }
 
         @keyframes ticker-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         .ticker-wrap {
@@ -140,7 +160,7 @@
 
         .ticker-item {
             flex-shrink: 0;
-            color: #dfb36c;
+            color: var(--gold-light);
             font-size: clamp(14px, 2.2vw, 22px);
             padding: 0 clamp(16px, 3vw, 32px);
         }
@@ -165,12 +185,17 @@
             pointer-events: none;
         }
 
-        .tv-strict-container video { z-index: 1; }
-        .tv-strict-container img { z-index: 2; }
+        .tv-strict-container video {
+            z-index: 1;
+        }
+
+        .tv-strict-container img {
+            z-index: 2;
+        }
 
         /* MAIN WEBSITE STYLES */
         .relief-card {
-            background: linear-gradient(135deg, #f9f6ef 0%, #efe7d8 100%) !important;
+            background: linear-gradient(135deg, #f9f6ef 0%, #efe7d8 100%);
             box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8), 0 10px 25px -5px rgba(82, 0, 14, 0.15);
             border: 1px solid #e6dcce;
         }
@@ -198,8 +223,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(135deg, #fbf5eb 0%, #efe7d8 100%) !important;
-            color: #52000e !important;
+            background: linear-gradient(135deg, #fbf5eb 0%, #efe7d8 100%);
+            color: #52000e;
             padding: 6px 14px;
             border-radius: 12px;
             font-size: clamp(12px, 1.8vw, 14px);
@@ -241,7 +266,7 @@
         }
 
         .clock-box-wrapper {
-            background: linear-gradient(135deg, #ffffff 0%, #f9f6ef 100%) !important;
+            background: linear-gradient(135deg, #ffffff 0%, #f9f6ef 100%);
             border: 2px solid #d4c5af;
             box-shadow: 0 20px 40px rgba(82, 0, 14, 0.12), inset 0 2px 6px rgba(255, 255, 255, 0.9);
             border-radius: 24px;
@@ -267,7 +292,7 @@
             position: relative;
             width: clamp(55px, 12vw, 95px);
             height: clamp(65px, 14vw, 110px);
-            background: linear-gradient(135deg, #52000e 0%, #330008 100%) !important;
+            background: linear-gradient(135deg, #52000e 0%, #330008 100%);
             border-radius: 14px;
             border: 2px solid #ca8a04;
             box-shadow: 0 10px 25px rgba(82, 0, 14, 0.25), inset 0 2px 4px rgba(255, 255, 255, 0.15);
@@ -290,7 +315,7 @@
             font-size: clamp(11px, 1.6vw, 14px);
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: #7a0016 !important;
+            color: #7a0016;
             font-weight: 600;
         }
 
@@ -309,18 +334,24 @@
             will-change: transform;
         }
 
-        .photo-ticker-track:hover { animation-play-state: paused; }
+        .photo-ticker-track:hover {
+            animation-play-state: paused;
+        }
 
         @keyframes scroll-photos {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         .moving-frame-card {
             flex-shrink: 0;
             width: 240px;
             margin: 0 12px;
-            background: linear-gradient(135deg, #f9f6ef 0%, #efe7d8 100%) !important;
+            background: linear-gradient(135deg, #f9f6ef 0%, #efe7d8 100%);
             border: 2px solid #ca8a04;
             border-radius: 16px;
             overflow: hidden;
@@ -331,7 +362,7 @@
             position: relative;
             width: 100%;
             overflow: hidden;
-            background: #590915 !important;
+            background: var(--maroon);
         }
 
         .frame-image {
@@ -370,12 +401,12 @@
             width: 55px;
             height: 55px;
             border-radius: 50%;
-            background-color: #f4f0e6 !important;
+            background-color: #f4f0e6;
             border: 4px solid rgb(82, 10, 9);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #52000e !important;
+            color: #52000e;
             font-size: 1.4rem;
             box-shadow: 6px 6px 14px rgba(100, 70, 40, 0.25), -6px -6px 14px rgba(255, 255, 255, 0.9);
             transition: all 0.3s ease;
@@ -387,10 +418,10 @@
             border-color: rgba(161, 98, 7, 0.6);
         }
 
-        .neu-social-btn.whatsapp:hover { color: #25D366 !important; }
-        .neu-social-btn.instagram:hover { color: #E1306C !important; }
-        .neu-social-btn.youtube:hover { color: #FF0000 !important; }
-        .neu-social-btn.facebook:hover { color: #1877F2 !important; }
+        .neu-social-btn.whatsapp:hover { color: #25D366; }
+        .neu-social-btn.instagram:hover { color: #E1306C; }
+        .neu-social-btn.youtube:hover { color: #FF0000; }
+        .neu-social-btn.facebook:hover { color: #1877F2; }
 
         @media (max-width: 640px) {
             .footer-card-position { top: 10% !important; }
@@ -404,7 +435,7 @@
     </style>
 </head>
 
-<body class="bg-[#fcfbf7] text-stone-800 font-sans antialiased selection:bg-gold-500 selection:text-crimson-950 overflow-x-hidden" style="background-color: #fcfbf7 !important; color: #1c1917 !important;">
+<body class="bg-sand-50 text-stone-800 font-sans antialiased selection:bg-gold-500 selection:text-crimson-950 overflow-x-hidden">
 
     <!-- SCREEN 1: VIDEO INTRO ENTRY -->
     <section class="envelope-wrapper" id="envelopeWrapper">
@@ -455,7 +486,7 @@
         </section>
 
         <!-- SECTION 3: Architectural History & Heritage Story -->
-        <section id="history" class="py-24 bg-[#e6dcce] text-stone-900 relative reveal" style="background-color: #e6dcce !important;">
+        <section id="history" class="py-24 bg-sand-200 text-stone-900 relative reveal">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="space-y-3">
@@ -502,10 +533,10 @@
                     </div>
 
                     <div class="relative">
-                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-sand-300 bg-white p-2">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-sand-300">
                             <img src="c.png" alt="आचार्य श्री सुंदर सागर जी महाराज" loading="lazy" width="600"
                                 height="700"
-                                class="w-full h-auto object-cover block rounded-xl">
+                                class="w-full h-auto object-cover block shadow-[inset_0_2px_4px_rgba(255,255,255,0.8),0_10px_25px_-5px_rgba(82,0,14,0.15)] rounded-2xl border border-[#e6dcce]">
                         </div>
                     </div>
                 </div>
@@ -513,7 +544,7 @@
         </section>
 
         <!-- COUNTDOWN TIMER SECTION -->
-        <section class="py-16 sm:py-24 bg-[#f4f0e6] text-stone-900 reveal relative overflow-hidden" style="background-color: #f4f0e6 !important;">
+        <section class="py-16 sm:py-24 bg-sand-100 text-stone-900 reveal relative overflow-hidden">
             <div class="max-w-4xl mx-auto px-4 relative z-10">
                 <div class="clock-box-wrapper text-center space-y-6 sm:space-y-8 relative overflow-hidden">
                     <div class="absolute inset-0 z-0 overflow-hidden rounded-[24px]">
@@ -522,26 +553,26 @@
                     </div>
 
                     <div class="relative z-10 space-y-3">
-                        <span class="text-amber-800 uppercase text-base sm:text-lg font-bold tracking-wider font-sans drop-shadow-md block">१४ नवंबर २०२६ की ओर मंगलमय यात्रा</span>
-                        <h3 class="text-2xl sm:text-4xl font-bold text-stone-900 drop-shadow-md leading-relaxed">शुभ घड़ी में समय शेष</h3>
-                        <div class="w-20 sm:w-24 h-1 bg-gold-600 mx-auto rounded-full shadow-md my-4"></div>
+                        <span class="text-gold-300 uppercase text-base sm:text-lg font-bold tracking-wider font-sans drop-shadow-md block">१४ नवंबर २०२६ की ओर मंगलमय यात्रा</span>
+                        <h3 class="text-2xl sm:text-4xl font-bold text-white drop-shadow-md leading-relaxed">शुभ घड़ी में समय शेष</h3>
+                        <div class="w-20 sm:w-24 h-1 bg-gold-400 mx-auto rounded-full shadow-md my-4"></div>
 
                         <div class="aesthetic-clock-container pt-4">
                             <div class="clock-unit">
                                 <div class="clock-card"><span id="days">००</span></div>
-                                <span class="clock-label text-amber-900 drop-shadow mt-2 block">दिन</span>
+                                <span class="clock-label text-gold-300 drop-shadow mt-2 block">दिन</span>
                             </div>
                             <div class="clock-unit">
                                 <div class="clock-card"><span id="hours">००</span></div>
-                                <span class="clock-label text-amber-900 drop-shadow mt-2 block">घंटे</span>
+                                <span class="clock-label text-gold-300 drop-shadow mt-2 block">घंटे</span>
                             </div>
                             <div class="clock-unit">
                                 <div class="clock-card"><span id="minutes">००</span></div>
-                                <span class="clock-label text-amber-900 drop-shadow mt-2 block">मिनट</span>
+                                <span class="clock-label text-gold-300 drop-shadow mt-2 block">मिनट</span>
                             </div>
                             <div class="clock-unit">
                                 <div class="clock-card"><span id="seconds">००</span></div>
-                                <span class="clock-label text-amber-900 drop-shadow mt-2 block">सेकंड</span>
+                                <span class="clock-label text-gold-300 drop-shadow mt-2 block">सेकंड</span>
                             </div>
                         </div>
                     </div>
@@ -549,8 +580,8 @@
             </div>
         </section>
 
-        <!-- SECTION 2: 6 FRAMES -->
-        <section id="relief" class="relative pt-6 pb-24 bg-[#f4f0e6] text-stone-800 overflow-hidden reveal" style="background-color: #f4f0e6 !important;">
+        <!-- SECTION 2: 6 FRAMES (Tablet View Updated to Stack/One After Another) -->
+        <section id="relief" class="relative pt-6 pb-24 bg-sand-100 text-stone-800 overflow-hidden reveal">
             <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#854d0e_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -562,6 +593,7 @@
                     <div class="w-24 h-1 bg-gold-600 mx-auto rounded-full"></div>
                 </div>
 
+                <!-- Responsive Grid: Stacks frames one after another on tablets using grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Frame 1 -->
@@ -795,7 +827,7 @@
         </section>
 
         <!-- SECTION: विशेष कार्यक्रम (Special Events) -->
-        <section id="special-events" class="py-24 bg-[#e6dcce] text-stone-900 reveal relative overflow-hidden" style="background-color: #e6dcce !important;">
+        <section id="special-events" class="py-24 bg-sand-200 text-stone-900 reveal relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
                     <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">|| मुख्य आकर्षण (Main Highlight) ||</span>
@@ -806,7 +838,7 @@
                 </div>
 
                 <div class="p-8 sm:p-12 rounded-3xl max-w-5xl mx-auto relative overflow-hidden"
-                    style="background: linear-gradient(135deg, #fffcf5 0%, #f4eee1 100%) !important; border: 3px solid #ca8a04; box-shadow: 0 25px 60px -10px rgba(82, 0, 14, 0.35), 0 0 30px rgba(202, 138, 4, 0.25);">
+                    style="background: linear-gradient(135deg, #fffcf5 0%, #f4eee1 100%); border: 3px solid #ca8a04; box-shadow: 0 25px 60px -10px rgba(82, 0, 14, 0.35), 0 0 30px rgba(202, 138, 4, 0.25);">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="text-center flex flex-col items-center justify-center space-y-5">
                             <div class="w-full flex justify-center">
@@ -850,7 +882,7 @@
         </section>
 
         <!-- SECTION: REGISTRATION FORM -->
-        <section id="registration-form-section" class="py-16 bg-[#f4f0e6] text-stone-900 reveal relative overflow-hidden" style="background-color: #f4f0e6 !important;">
+        <section id="registration-form-section" class="py-16 bg-sand-100 text-stone-900 reveal relative overflow-hidden">
             <div class="max-w-xl mx-auto px-4 sm:px-6 relative z-10">
                 <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
                     <span class="text-gold-700 uppercase text-sm sm:text-base font-bold tracking-widest font-sans">|| अपनी उपस्थिति दर्ज करें ||</span>
@@ -860,36 +892,36 @@
                     <div class="w-20 h-1 bg-gold-600 mx-auto rounded-full"></div>
                 </div>
 
-                <div class="form-box-container p-6 sm:p-10 rounded-3xl relative overflow-hidden shadow-2xl bg-gradient-to-br from-[#f9f6ef] to-[#efe7d8] border-2 border-gold-600" style="background: #f9f6ef !important;">
+                <div class="p-6 sm:p-10 rounded-3xl relative overflow-hidden shadow-2xl bg-gradient-to-br from-[#f9f6ef] to-[#efe7d8] border-2 border-gold-600">
                     <form id="rsvpForm" class="space-y-6">
                         <div>
                             <label class="block text-crimson-950 font-bold mb-2 text-sm sm:text-base font-sans" for="formName">पूरा नाम (Name) <span class="text-red-600">*</span></label>
                             <input type="text" id="formName" required placeholder="अपना नाम दर्ज करें"
-                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner" style="background: #ffffff !important; color: #1c1917 !important;">
+                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner">
                         </div>
 
                         <div>
                             <label class="block text-crimson-950 font-bold mb-2 text-sm sm:text-base font-sans" for="formMobile">मोबाइल नंबर (Mobile No.) <span class="text-red-600">*</span></label>
                             <input type="tel" id="formMobile" required pattern="[0-9]{10}" placeholder="१० अंकों का मोबाइल नंबर"
-                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner" style="background: #ffffff !important; color: #1c1917 !important;">
+                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner">
                         </div>
 
                         <div>
                             <label class="block text-crimson-950 font-bold mb-2 text-sm sm:text-base font-sans" for="formCity">शहर (City) <span class="text-red-600">*</span></label>
                             <input type="text" id="formCity" required placeholder="अपने शहर का नाम"
-                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner" style="background: #ffffff !important; color: #1c1917 !important;">
+                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner">
                         </div>
 
                         <div>
                             <label class="block text-crimson-950 font-bold mb-2 text-sm sm:text-base font-sans" for="formMembers">सम्मिलित होने वाले सदस्यों की संख्या (Members) <span class="text-red-600">*</span></label>
                             <input type="number" id="formMembers" required min="1" value="1"
-                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner" style="background: #ffffff !important; color: #1c1917 !important;">
+                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner">
                         </div>
 
                         <div>
                             <label class="block text-crimson-950 font-bold mb-2 text-sm sm:text-base font-sans" for="formArrivalDate">आने की तिथि (Date of Arrival) <span class="text-red-600">*</span></label>
                             <input type="date" id="formArrivalDate" required
-                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner" style="background: #ffffff !important; color: #1c1917 !important;">
+                                class="w-full px-4 py-3 rounded-xl border-2 border-sand-300 bg-white text-stone-900 focus:outline-none focus:border-gold-600 font-sans shadow-inner">
                         </div>
 
                         <div class="text-center pt-4">
@@ -906,7 +938,7 @@
         </section>
 
         <!-- SECTION 5: Venue Details & Google Map -->
-        <section id="venue" class="py-24 bg-[#f4f0e6] text-stone-900 reveal" style="background-color: #f4f0e6 !important;">
+        <section id="venue" class="py-24 bg-sand-100 text-stone-900 reveal">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
                     <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">पावन स्थल एवं मार्ग</span>
@@ -917,8 +949,8 @@
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                    <div class="relative rounded-2xl shadow-xl border border-sand-300 p-8 space-y-6 lg:col-span-1 text-center lg:text-left overflow-hidden bg-cover bg-center bg-no-repeat bg-white"
-                        style="background-image: linear-gradient(rgba(252, 251, 247, 0.92), rgba(252, 251, 247, 0.92)), url('bg.jpg'); background-color: #ffffff !important;">
+                    <div class="relative rounded-2xl shadow-xl border border-sand-300 p-8 space-y-6 lg:col-span-1 text-center lg:text-left overflow-hidden bg-cover bg-center bg-no-repeat"
+                        style="background-image: linear-gradient(rgba(252, 251, 247, 0.92), rgba(252, 251, 247, 0.92)), url('bg.jpg');">
                         <div class="w-16 h-16 bg-crimson-900 text-gold-400 rounded-2xl flex items-center justify-center mx-auto lg:mx-0 shadow-md relative z-10">
                             <i class="fa-solid fa-location-dot text-2xl"></i>
                         </div>
@@ -1133,6 +1165,7 @@
             arrivalDate: document.getElementById('formArrivalDate').value.trim()
         };
 
+        // 1. Instantly show success message and reset form for the user (Zero wait time)
         formMessage.classList.remove('hidden', 'text-red-600');
         formMessage.classList.add('text-green-700');
         formMessage.innerText = '✨ आपका पंजीकरण सफलतापूर्वक दर्ज हो गया है! धन्यवाद।';
@@ -1140,6 +1173,7 @@
         rsvpForm.reset();
         submitBtn.setAttribute('disabled', 'true');
 
+        // 2. Send data to Google Sheet asynchronously in the background using 'no-cors'
         fetch(SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors',
