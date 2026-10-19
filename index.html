@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#590915">
-    <meta name="color-scheme" content="light">
+    <meta name="color-scheme" content="only light">
     <title>Invitation Card</title>
 
     <!-- Preload Critical Above-the-Fold Assets -->
@@ -45,7 +45,7 @@
 
     <style>
         :root {
-            color-scheme: light only;
+            color-scheme: only light;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -64,7 +64,8 @@
 
         html,
         body {
-            background-color: var(--maroon);
+            color-scheme: only light;
+            background-color: var(--maroon) !important;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -513,11 +514,11 @@
                                 <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">आचार्य पद</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
-                                <span class="font-sans text-3xl font-bold text-crimson-900 block">70+</span>
+                                <span class="font-sans text-3xl font-bold text-crimson-900 block">60+</span>
                                 <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">दीक्षाएँ</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
-                                <span class="font-sans text-3xl font-bold text-crimson-900 block">40+</span>
+                                <span class="font-sans text-3xl font-bold text-crimson-900 block">30+</span>
                                 <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">समाधि</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
@@ -1139,7 +1140,7 @@
     </script>
 
     <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwaZmtfLXRUs1omJLT-pS1F3j4d8RQTVOlB4AX_KVB_vqIO3Jyxhv66PWZNLLPGuNnI8A/exec'; // Keep your deployed Web App URL here
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwaZmtfLXRUs1omJLT-pS1F3j4d8RQTVOlB4AX_KVB_vqIO3Jyxhv66PWZNLLPGuNnI8A/exec';
 
     const rsvpForm = document.getElementById('rsvpForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -1156,7 +1157,6 @@
     rsvpForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Collect form data immediately
         const formData = {
             name: document.getElementById('formName').value.trim(),
             mobile: document.getElementById('formMobile').value.trim(),
