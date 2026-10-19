@@ -48,9 +48,7 @@
             color-scheme: light only;
         }
 
-        /* Agar kuch browsers fir bhi dark mode apply karein, toh unhe ye override kar dega */
         @media (prefers-color-scheme: dark) {
-
             html,
             body {
                 color-scheme: light;
@@ -64,7 +62,6 @@
             --gold-light: #dfb36c;
         }
 
-        /* Prevent FOUC and ensure instant background styling */
         html,
         body {
             background-color: var(--maroon);
@@ -127,7 +124,6 @@
             0% {
                 transform: translateX(0);
             }
-
             100% {
                 transform: translateX(-50%);
             }
@@ -175,7 +171,6 @@
             aspect-ratio: 4 / 3;
             margin: 0 auto;
             transform: translateZ(0);
-            /* Hardware Acceleration */
         }
 
         .tv-strict-container video,
@@ -346,7 +341,6 @@
             0% {
                 transform: translateX(0);
             }
-
             100% {
                 transform: translateX(-50%);
             }
@@ -380,7 +374,6 @@
             pointer-events: none;
         }
 
-        /* Smooth Hardware-Accelerated Reveal Effect */
         .reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -424,57 +417,29 @@
             border-color: rgba(161, 98, 7, 0.6);
         }
 
-        .neu-social-btn.whatsapp:hover {
-            color: #25D366;
-        }
-
-        .neu-social-btn.instagram:hover {
-            color: #E1306C;
-        }
-
-        .neu-social-btn.youtube:hover {
-            color: #FF0000;
-        }
-
-        .neu-social-btn.facebook:hover {
-            color: #1877F2;
-        }
+        .neu-social-btn.whatsapp:hover { color: #25D366; }
+        .neu-social-btn.instagram:hover { color: #E1306C; }
+        .neu-social-btn.youtube:hover { color: #FF0000; }
+        .neu-social-btn.facebook:hover { color: #1877F2; }
 
         @media (max-width: 640px) {
-            .footer-card-position {
-                top: 10% !important;
-            }
-
-            .footer-card-box {
-                max-width: 280px !important;
-                min-height: 480px !important;
-                padding: 1.5rem !important;
-            }
+            .footer-card-position { top: 10% !important; }
+            .footer-card-box { max-width: 280px !important; min-height: 480px !important; padding: 1.5rem !important; }
         }
 
         @media (min-width: 641px) and (max-width: 1024px) {
-            .footer-card-position {
-                top: 15% !important;
-            }
-
-            .footer-card-box {
-                min-height: 550px !important;
-            }
+            .footer-card-position { top: 15% !important; }
+            .footer-card-box { min-height: 550px !important; }
         }
     </style>
 </head>
 
-<body
-    class="bg-sand-50 text-stone-800 font-sans antialiased selection:bg-gold-500 selection:text-crimson-950 overflow-x-hidden">
+<body class="bg-sand-50 text-stone-800 font-sans antialiased selection:bg-gold-500 selection:text-crimson-950 overflow-x-hidden">
 
     <!-- SCREEN 1: VIDEO INTRO ENTRY -->
     <section class="envelope-wrapper" id="envelopeWrapper">
         <div class="ticker-wrap" aria-hidden="true">
             <div class="ticker-track">
-                <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
-                <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
-                <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
-                <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति पण्डित विमल सन्मति सुंदर सागराय नमः ॥</span>
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
                 <span class="ticker-item">॥ सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ॥</span>
@@ -524,57 +489,44 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="space-y-3">
-                        <span
-                            class="text-gold-700 uppercase text-sm sm:text-base font-bold tracking-widest font-sans">दिव्य
-                            तपस्वी राष्ट्रसंत आचार्य श्री 108</span>
+                        <span class="text-gold-700 uppercase text-sm sm:text-base font-bold tracking-widest font-sans">दिव्य तपस्वी राष्ट्रसंत आचार्य श्री 108</span>
                         <h2 class="text-3xl sm:text-4xl font-bold text-crimson-950 leading-tight">
                             सुंदर सागर जी महाराज
                         </h2>
 
                         <p class="text-stone-700 leading-relaxed font-sans text-base">
-                            दिव्य तप और त्याग की प्रतिमूर्ति, आचार्य श्री 108 सुंदर सागर जी महाराज जैन धर्म के महान संत
-                            हैं।
+                            दिव्य तप और त्याग की मूर्ति, आचार्य श्री 108 सुंदर सागर जी महाराज जैन धर्म के महान संत हैं।
                             उनका पावन जीवन संयम, साधना और आत्मकल्याण का अनुपम संदेश देता है।
                             उनके अमृतमयी वचन जीवन को धर्म और सदाचार के मार्ग पर चलने की प्रेरणा देते हैं।
                             उनका त्यागमय जीवन युवाओं में संस्कार, समर्पण और सेवा की भावना जागृत करता है।
                             ऐसे दिव्य तपस्वी गुरुदेव के श्रीचरणों में कोटि-कोटि नमोस्तु ||
                         </p>
                         <br>
-                        <span
-                            class="text-gold-700 uppercase text-sm sm:text-base font-bold tracking-widest font-sans">बाल
-                            प्रदीप के वितराग पथ पर बढ़ते कदम -</span>
+                        <span class="text-gold-700 uppercase text-sm sm:text-base font-bold tracking-widest font-sans">बाल प्रदीप के वितराग पथ पर बढ़ते कदम -</span>
                         <div class="grid grid-cols-2 gap-6 pt-4">
                             <div class="border-l-4 border-gold-600 pl-4">
                                 <span class="font-sans text-3xl font-bold text-crimson-900 block">31 साल</span>
-                                <span
-                                    class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">श्रमण
-                                    दीक्षा</span>
+                                <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">श्रमण दीक्षा</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
                                 <span class="font-sans text-3xl font-bold text-crimson-900 block">19 साल</span>
-                                <span
-                                    class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">आचार्य
-                                    पद</span>
+                                <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">आचार्य पद</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
                                 <span class="font-sans text-3xl font-bold text-crimson-900 block">60+</span>
-                                <span
-                                    class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">दिक्षाएँ</span>
+                                <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">दीक्षाएँ</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
                                 <span class="font-sans text-3xl font-bold text-crimson-900 block">30+</span>
-                                <span
-                                    class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">समाधि</span>
+                                <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">समाधि</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
                                 <span class="font-sans text-3xl font-bold text-crimson-900 block">50+</span>
-                                <span
-                                    class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">पंचकल्याणक</span>
+                                <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">पंचकल्याणक</span>
                             </div>
                             <div class="border-l-4 border-gold-600 pl-4">
                                 <span class="font-sans text-3xl font-bold text-crimson-900 block">1500+</span>
-                                <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">तप
-                                    आराधना</span>
+                                <span class="text-xs uppercase tracking-wider text-stone-600 font-semibold font-sans">तप आराधना</span>
                             </div>
                         </div>
                     </div>
@@ -600,11 +552,8 @@
                     </div>
 
                     <div class="relative z-10 space-y-3">
-                        <span
-                            class="text-gold-300 uppercase text-base sm:text-lg font-bold tracking-wider font-sans drop-shadow-md block">१४
-                            नवंबर २०२६ की ओर मंगलमय यात्रा</span>
-                        <h3 class="text-2xl sm:text-4xl font-bold text-white drop-shadow-md leading-relaxed">शुभ घड़ी
-                            में समय शेष</h3>
+                        <span class="text-gold-300 uppercase text-base sm:text-lg font-bold tracking-wider font-sans drop-shadow-md block">१४ नवंबर २०२६ की ओर मंगलमय यात्रा</span>
+                        <h3 class="text-2xl sm:text-4xl font-bold text-white drop-shadow-md leading-relaxed">शुभ घड़ी में समय शेष</h3>
                         <div class="w-20 sm:w-24 h-1 bg-gold-400 mx-auto rounded-full shadow-md my-4"></div>
 
                         <div class="aesthetic-clock-container pt-4">
@@ -630,48 +579,42 @@
             </div>
         </section>
 
-        <!-- SECTION 2: 6 FRAMES -->
+        <!-- SECTION 2: 6 FRAMES (Tablet View Updated to Stack/One After Another) -->
         <section id="relief" class="relative pt-6 pb-24 bg-sand-100 text-stone-800 overflow-hidden reveal">
-            <div
-                class="absolute inset-0 opacity-5 bg-[radial-gradient(#854d0e_1px,transparent_1px)] [background-size:16px_16px]">
-            </div>
+            <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#854d0e_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-            <div class="max-w-12xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-12xl mx-auto mb-16 space-y-4 -mt-1 sm:-mt-8">
-                    <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">||
-                        श्री सुन्दरसागराय नम: ||</span>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 -mt-1 sm:-mt-8">
+                    <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">|| श्री सुन्दरसागराय नम: ||</span>
                     <h2 class="text-3xl sm:text-5xl font-bold text-crimson-950">
                         दिव्य आयोजन के प्रमुख आकर्षण
                     </h2>
                     <div class="w-24 h-1 bg-gold-600 mx-auto rounded-full"></div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Responsive Grid: Stacks frames one after another on tablets using grid-cols-1 md:grid-cols-2 lg:grid-cols-3 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
                     <!-- Frame 1 -->
                     <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
                         <div class="frame-wrapper">
-                            <img src="f.webp" alt="फ्रेम १" class="frame-base-img" loading="lazy" width="400"
-                                height="500">
+                            <img src="f.webp" alt="फ्रेम १" class="frame-base-img" loading="lazy" width="400" height="500">
                             <div class="frame-content">
-                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                    width="240" height="240">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy" width="240" height="240">
                                 <div class="space-y-1 my-auto">
                                     <h3 class="frame-heading no-underline">महामस्तकाभिषेक</h3>
                                     <h4 class="frame-heading text-lg sm:text-xl block">मूलनायक शांतिनाथ भगवान</h4>
-                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A vessel of
-                                        blessings</p>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A vessel of blessings</p>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
-                                            नवंबर २०२६</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४ नवंबर २०२६</span>
                                     </div>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सुबह
-                                            ०7:०० बजे</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सुबह ०७:०० बजे</span>
                                     </div>
                                 </div>
                                 <div class="w-full flex justify-center mb-9">
                                     <button
-                                        onclick="addToCalendar('महामस्तकाभिषेक', 'A vessel of blessings', '2026-11-14T07:00:00', '2026-11-14T11:00:00')"
+                                        onclick="addToCalendar('महामस्तकाभिषेक - मूलनायक शांतिनाथ भगवान', 'A vessel of blessings', '2026-11-14T07:00:00', '2026-11-14T11:00:00')"
                                         class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
                                         <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
                                     </button>
@@ -683,28 +626,23 @@
                     <!-- Frame 2 -->
                     <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
                         <div class="frame-wrapper">
-                            <img src="f.webp" alt="फ्रेम २" class="frame-base-img" loading="lazy" width="400"
-                                height="500">
+                            <img src="f.webp" alt="फ्रेम २" class="frame-base-img" loading="lazy" width="400" height="500">
                             <div class="frame-content">
-                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                    width="240" height="240">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy" width="240" height="240">
                                 <div class="space-y-1 my-auto">
                                     <h2 class="frame-heading no-underline">तपस्वी सम्राट आचार्य श्री</h2>
                                     <h3 class="frame-heading text-lg sm:text-xl block">सन्मति सागर जी विधान</h3>
-                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">Lets start
-                                        with blessings of guru</p>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">Lets start with blessings of guru</p>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
-                                            नवंबर २०२६</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४ नवंबर २०२६</span>
                                     </div>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> दोपहर
-                                            01:00 बजे</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> दोपहर ०१:०० बजे</span>
                                     </div>
                                 </div>
                                 <div class="w-full flex justify-center mb-9">
                                     <button
-                                        onclick="addToCalendar('सन्मति सागर विधान', 'Lets start with blessings of guru', '2026-11-14T13:00:00', '2026-11-14T16:00:00')"
+                                        onclick="addToCalendar('तपस्वी सम्राट आचार्य श्री सन्मति सागर जी विधान', 'Lets start with blessings of guru', '2026-11-14T13:00:00', '2026-11-14T16:00:00')"
                                         class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
                                         <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
                                     </button>
@@ -716,25 +654,20 @@
                     <!-- Frame 3 -->
                     <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
                         <div class="frame-wrapper">
-                            <img src="f.webp" alt="फ्रेम ३" class="frame-base-img" loading="lazy" width="400"
-                                height="500">
+                            <img src="f.webp" alt="फ्रेम ३" class="frame-base-img" loading="lazy" width="400" height="500">
                             <div class="frame-content">
-                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                    width="240" height="240">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy" width="240" height="240">
                                 <div class="space-y-1 my-auto">
                                     <div class="py-2">
                                         <img src="ratnatray.PNG" style="width: 180px; height: auto; margin: 0 auto;"
                                             alt="रत्नत्रय आराधना" loading="lazy" width="180" height="120">
                                     </div>
-                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A night to
-                                        remember</p>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A night to remember</p>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
-                                            नवंबर २०२६</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४ नवंबर २०२६</span>
                                     </div>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> शाम ०७:००
-                                            बजे</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> शाम ०७:०० बजे</span>
                                     </div>
                                 </div>
                                 <div class="w-full flex justify-center mb-9">
@@ -751,29 +684,23 @@
                     <!-- Frame 4 -->
                     <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
                         <div class="frame-wrapper">
-                            <img src="f.webp" alt="फ्रेम ४" class="frame-base-img" loading="lazy" width="400"
-                                height="500">
+                            <img src="f.webp" alt="फ्रेम ४" class="frame-base-img" loading="lazy" width="400" height="500">
                             <div class="frame-content">
-                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                    width="240" height="240">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy" width="240" height="240">
                                 <div class="space-y-1 my-auto">
-                                    <h3 class="frame-heading no-underline">दिव्य तपस्वी आचार्य श्री <br>सुन्दर सागर जी
-                                        विधान</h3>
+                                    <h3 class="frame-heading no-underline">दिव्य तपस्वी आचार्य श्री <br>सुन्दर सागर जी विधान</h3>
                                     <h1 class="frame-heading text-2xl sm:text-3xl block">50 मंडलो के साथ</h1>
-                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">The morning
-                                        of forever</p>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">The morning of forever</p>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> 15
-                                            नवंबर २०२६</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १५ नवंबर २०२६</span>
                                     </div>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> प्रातः
-                                            07:00 बजे</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> प्रातः ०७:०० बजे</span>
                                     </div>
                                 </div>
                                 <div class="w-full flex justify-center mb-9">
                                     <button
-                                        onclick="addToCalendar('आचार्य सुन्दर सागर विधान', 'The morning of forever', '2026-11-15T07:00:00', '2026-11-15T11:00:00')"
+                                        onclick="addToCalendar('दिव्य तपस्वी आचार्य सुन्दर सागर जी विधान (50 मंडलो के साथ)', 'The morning of forever', '2026-11-15T07:00:00', '2026-11-15T11:00:00')"
                                         class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
                                         <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
                                     </button>
@@ -785,22 +712,17 @@
                     <!-- Frame 5 -->
                     <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
                         <div class="frame-wrapper">
-                            <img src="f.webp" alt="फ्रेम ५" class="frame-base-img" loading="lazy" width="400"
-                                height="500">
+                            <img src="f.webp" alt="फ्रेम ५" class="frame-base-img" loading="lazy" width="400" height="500">
                             <div class="frame-content">
-                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                    width="240" height="240">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy" width="240" height="240">
                                 <div class="space-y-1 my-auto">
                                     <h3 class="frame-heading">दिव्य जन्मोत्सव</h3>
-                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">Moments we
-                                        hold close</p>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">Moments we hold close</p>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> 15
-                                            नवंबर २०२६</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १५ नवंबर २०२६</span>
                                     </div>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> दोपहर
-                                            01:00 बजे</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> दोपहर ०१:०० बजे</span>
                                     </div>
                                 </div>
                                 <div class="w-full flex justify-center mb-9">
@@ -817,22 +739,17 @@
                     <!-- Frame 6 -->
                     <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
                         <div class="frame-wrapper">
-                            <img src="f.webp" alt="फ्रेम ६" class="frame-base-img" loading="lazy" width="400"
-                                height="500">
+                            <img src="f.webp" alt="फ्रेम ६" class="frame-base-img" loading="lazy" width="400" height="500">
                             <div class="frame-content">
-                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                    width="240" height="240">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy" width="240" height="240">
                                 <div class="space-y-1 my-auto">
                                     <h3 class="frame-heading">एक शाम सुन्दर गुरु के नाम</h3>
-                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">An Evening
-                                        filled of Devotion</p>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">An Evening filled of Devotion</p>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> 15
-                                            नवंबर २०२६</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १५ नवंबर २०२६</span>
                                     </div>
                                     <div>
-                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सायं
-                                            07:00 बजे</span>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सायं ०७:०० बजे</span>
                                     </div>
                                 </div>
                                 <div class="w-full flex justify-center mb-9">
@@ -855,77 +772,54 @@
             <div class="photo-ticker-container">
                 <div class="photo-ticker-track">
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="1.JPG" alt="Photo 1" loading="lazy" width="240" height="320"
-                                class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
+                        <div class="relative p-2"><img src="1.JPG" alt="Photo 1" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="2.JPG" alt="Photo 2" loading="lazy" width="240" height="320"
-                                class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
+                        <div class="relative p-2"><img src="2.JPG" alt="Photo 2" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="3.jpeg" alt="Photo 3" loading="lazy" width="240"
-                                height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50">
-                        </div>
+                        <div class="relative p-2"><img src="3.jpeg" alt="Photo 3" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="4.JPG" alt="Photo 4" loading="lazy" width="240" height="320"
-                                class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
+                        <div class="relative p-2"><img src="4.JPG" alt="Photo 4" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="5.JPG" alt="Photo 5" loading="lazy" width="240" height="320"
-                                class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
+                        <div class="relative p-2"><img src="5.JPG" alt="Photo 5" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="6.jpeg" alt="Photo 6" loading="lazy" width="240"
-                                height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50">
-                        </div>
+                        <div class="relative p-2"><img src="6.jpeg" alt="Photo 6" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="7.jpeg" alt="Photo 7" loading="lazy" width="240"
-                                height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50">
-                        </div>
+                        <div class="relative p-2"><img src="7.jpeg" alt="Photo 7" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="8.jpeg" alt="Photo 8" loading="lazy" width="240"
-                                height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50">
-                        </div>
+                        <div class="relative p-2"><img src="8.jpeg" alt="Photo 8" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
 
+                    <!-- Duplicate for infinite ticker smoothness -->
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="1.JPG" alt="Photo 1" loading="lazy" width="240" height="320"
-                                class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
+                        <div class="relative p-2"><img src="1.JPG" alt="Photo 1" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="2.JPG" alt="Photo 2" loading="lazy" width="240" height="320"
-                                class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
+                        <div class="relative p-2"><img src="2.JPG" alt="Photo 2" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="3.jpeg" alt="Photo 3" loading="lazy" width="240"
-                                height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50">
-                        </div>
+                        <div class="relative p-2"><img src="3.jpeg" alt="Photo 3" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="4.JPG" alt="Photo 4" loading="lazy" width="240" height="320"
-                                class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
+                        <div class="relative p-2"><img src="4.JPG" alt="Photo 4" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="5.JPG" alt="Photo 5" loading="lazy" width="240" height="320"
-                                class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
+                        <div class="relative p-2"><img src="5.JPG" alt="Photo 5" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="6.jpeg" alt="Photo 6" loading="lazy" width="240"
-                                height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50">
-                        </div>
+                        <div class="relative p-2"><img src="6.jpeg" alt="Photo 6" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="7.jpeg" alt="Photo 7" loading="lazy" width="240"
-                                height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50">
-                        </div>
+                        <div class="relative p-2"><img src="7.jpeg" alt="Photo 7" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                     <div class="moving-frame-card">
-                        <div class="relative p-2"><img src="8.jpeg" alt="Photo 8" loading="lazy" width="240"
-                                height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50">
-                        </div>
+                        <div class="relative p-2"><img src="8.jpeg" alt="Photo 8" loading="lazy" width="240" height="320" class="w-full h-80 object-cover rounded-xl border border-gold-500/50"></div>
                     </div>
                 </div>
             </div>
@@ -935,10 +829,8 @@
         <section id="special-events" class="py-24 bg-sand-200 text-stone-900 reveal relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                    <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">||
-                        मुख्य आकर्षण (Main Highlight) ||</span>
-                    <h2 class="text-3xl sm:text-5xl font-bold text-crimson-950"
-                        style="font-family: 'Tiro Devanagari Hindi', serif;">
+                    <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">|| मुख्य आकर्षण (Main Highlight) ||</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-crimson-950" style="font-family: 'Tiro Devanagari Hindi', serif;">
                         विशेष कार्यक्रम
                     </h2>
                     <div class="w-24 h-1 bg-gold-600 mx-auto rounded-full"></div>
@@ -950,22 +842,18 @@
                         <div class="text-center flex flex-col items-center justify-center space-y-5">
                             <div class="w-full flex justify-center">
                                 <img src="ratnatray.PNG" alt="रत्नत्रय"
-                                    class="w-full max-w-[340px] h-auto object-contain drop-shadow-2xl" loading="lazy"
-                                    width="440" height="220">
+                                    class="w-full max-w-[340px] h-auto object-contain drop-shadow-2xl" loading="lazy" width="440" height="220">
                             </div>
                             <div class="space-y-4">
-                                <div
-                                    class="py-2 px-4 rounded-2xl bg-gradient-to-r from-crimson-900/10 via-gold-500/20 to-crimson-900/10 border-4 border-gold-500/40 shadow-sm my-2">
+                                <div class="py-2 px-4 rounded-2xl bg-gradient-to-r from-crimson-900/10 via-gold-500/20 to-crimson-900/10 border-4 border-gold-500/40 shadow-sm my-2">
                                     <h3 class="text-2xl sm:text-4xl font-black tracking-wide text-center drop-shadow-md py-1"
                                         style="font-family: 'Tiro Devanagari Hindi', serif; background: linear-gradient(135deg, #330008 0%, #7a0016 50%, #b8860b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                                         प्रदीप से सुंदर जगतपूज्य दिगंबर
                                     </h3>
                                 </div>
                                 <div class="flex flex-wrap justify-center gap-3 pt-1">
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४ नवंबर
-                                        २०२६</span>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सायं ०७:००
-                                        बजे</span>
+                                    <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४ नवंबर २०२६</span>
+                                    <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सायं ०७:०० बजे</span>
                                 </div>
                                 <p class="text-stone-700 font-sans text-2xl sm:text-3xl pt-1 font-medium">
                                     <b>Jain Concert</b>
@@ -975,36 +863,28 @@
 
                         <div class="flex flex-col items-center gap-4">
                             <div class="w-full max-w-[240px]">
-                                <img src="aak.JPEG" alt="विशेष कार्यक्रम फोटो १"
-                                    class="w-full h-40 object-cover rounded-2xl border-2 border-gold-500 shadow-xl"
-                                    loading="lazy" width="240" height="160">
+                                <img src="aak.JPEG" alt="विशेष कार्यक्रम फोटो १" class="w-full h-40 object-cover rounded-2xl border-2 border-gold-500 shadow-xl" loading="lazy" width="240" height="160">
                             </div>
                             <div class="grid grid-cols-2 gap-4 w-full">
-                                <img src="aan.jpeg" alt="विशेष कार्यक्रम फोटो २"
-                                    class="w-full h-36 object-cover rounded-2xl border-2 border-gold-500 shadow-xl"
-                                    loading="lazy" width="150" height="140">
-                                <img src="girl.JPEG" alt="विशेष कार्यक्रम फोटो ३"
-                                    class="w-full h-36 object-cover rounded-2xl border-2 border-gold-500 shadow-xl"
-                                    loading="lazy" width="150" height="140">
+                                <img src="aan.jpeg" alt="विशेष कार्यक्रम फोटो २" class="w-full h-36 object-cover rounded-2xl border-2 border-gold-500 shadow-xl" loading="lazy" width="150" height="140">
+                                <img src="girl.JPEG" alt="विशेष कार्यक्रम फोटो ३" class="w-full h-36 object-cover rounded-2xl border-2 border-gold-500 shadow-xl" loading="lazy" width="150" height="140">
                             </div>
                             <div class="flex flex-col items-center gap-4">
                                 <div class="w-full max-w-[240px]">
-                                    <img src="aag.JPEG" alt="विशेष कार्यक्रम फोटो १"
-                                        class="w-full h-40 object-cover rounded-2xl border-2 border-gold-500 shadow-xl"
-                                        loading="lazy" width="240" height="160">
+                                    <img src="aag.JPEG" alt="विशेष कार्यक्रम फोटो १" class="w-full h-40 object-cover rounded-2xl border-2 border-gold-500 shadow-xl" loading="lazy" width="240" height="160">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- SECTION 5: Venue Details & Google Map -->
         <section id="venue" class="py-24 bg-sand-100 text-stone-900 reveal">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                    <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">पावन
-                        स्थल एवं मार्ग</span>
+                    <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">पावन स्थल एवं मार्ग</span>
                     <h2 class="text-3xl sm:text-5xl font-bold text-crimson-950">
                         आयोजन स्थल (Venue)
                     </h2>
@@ -1014,15 +894,12 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                     <div class="relative rounded-2xl shadow-xl border border-sand-300 p-8 space-y-6 lg:col-span-1 text-center lg:text-left overflow-hidden bg-cover bg-center bg-no-repeat"
                         style="background-image: linear-gradient(rgba(252, 251, 247, 0.92), rgba(252, 251, 247, 0.92)), url('bg.jpg');">
-                        <div
-                            class="w-16 h-16 bg-crimson-900 text-gold-400 rounded-2xl flex items-center justify-center mx-auto lg:mx-0 shadow-md relative z-10">
+                        <div class="w-16 h-16 bg-crimson-900 text-gold-400 rounded-2xl flex items-center justify-center mx-auto lg:mx-0 shadow-md relative z-10">
                             <i class="fa-solid fa-location-dot text-2xl"></i>
                         </div>
                         <div class="space-y-2 relative z-10">
-                            <span class="text-gold-700 uppercase font-bold text-xs tracking-wider font-sans">मुख्य
-                                मंदिर</span>
-                            <h3 class="text-2xl font-bold text-crimson-950">श्री दिगंबर जैन अग्रवाल मंदिर, निवाई (टोंक)
-                                राजस्थान</h3>
+                            <span class="text-gold-700 uppercase font-bold text-xs tracking-wider font-sans">मुख्य मंदिर</span>
+                            <h3 class="text-2xl font-bold text-crimson-950">श्री दिगंबर जैन अग्रवाल मंदिर, निवाई (टोंक) राजस्थान</h3>
                             <p class="text-stone-700 text-sm leading-relaxed font-sans pt-2">
                                 निवाई, राजस्थान - ३०४०२१<br>
                             </p>
@@ -1036,8 +913,7 @@
                         </div>
                     </div>
 
-                    <div
-                        class="bg-sand-50 rounded-2xl overflow-hidden shadow-2xl border-2 border-sand-300 lg:col-span-2 h-[400px]">
+                    <div class="bg-sand-50 rounded-2xl overflow-hidden shadow-2xl border-2 border-sand-300 lg:col-span-2 h-[400px]">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919261.124878545!2d74.63224231954295!3d25.8410339777473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396e70dd22379c85%3A0xfdb59fe4923b1976!2sShri%20Digambar%20Jain%20Agrawal%20Mandir!5e0!3m2!1sen!2sin!4v1792313077839!5m2!1sen!2sin"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -1049,8 +925,7 @@
 
         <!-- SECTION 6: Bottom Image Layer -->
         <section class="image-layer reveal relative">
-            <img src="d.png" alt="Footer Background" loading="lazy" width="1200" height="900"
-                class="w-full h-auto block">
+            <img src="d.png" alt="Footer Background" loading="lazy" width="1200" height="900" class="w-full h-auto block">
 
             <div class="absolute z-10 w-full flex flex-col items-center pointer-events-auto px-4 footer-card-position"
                 style="top: 25%;">
@@ -1059,49 +934,41 @@
 
                     <div class="w-full max-w-2xl mx-auto px-4 space-y-6">
                         <div class="space-y-3 pb-4 border-b border-gold-500/30 text-center">
-                            <span class="text-gold-400 uppercase font-bold font-sans block"
-                                style="font-size: clamp(1.1rem, 2.4vw, 1.3rem);">
+                            <span class="text-gold-400 uppercase font-bold font-sans block" style="font-size: clamp(1.1rem, 2.4vw, 1.3rem);">
                                 मंगल प्रेरणा
                             </span>
-                            <h3 class="font-bold tracking-wide drop-shadow-md text-gold-300"
-                                style="font-size: clamp(1.1rem, 2.5vw, 1.4rem);">
+                            <h3 class="font-bold tracking-wide drop-shadow-md text-gold-300" style="font-size: clamp(1.1rem, 2.5vw, 1.4rem);">
                                 आर्यिका श्री 105<br>
                                 <span class="text-white block mt-1" style="font-size: clamp(1.2rem, 2.8vw, 1.8rem);">
-                                सुलक्ष्यमति माताजी
+                                    सुलक्ष्यमति माताजी
                                 </span>
                             </h3>
                         </div>
 
                         <div class="space-y-6 text-center">
                             <div class="space-y-1">
-                                <span class="text-gold-400 font-bold uppercase tracking-wider font-sans block"
-                                    style="font-size: clamp(1.0rem, 2.2vw, 1.2rem);">
+                                <span class="text-gold-400 font-bold uppercase tracking-wider font-sans block" style="font-size: clamp(1.0rem, 2.2vw, 1.2rem);">
                                     आयोजक
                                 </span>
-                                <p class="font-semibold drop-shadow-md text-sand-100 font-sans"
-                                    style="font-size: clamp(1.0rem, 2.3vw, 1.3rem);">
+                                <p class="font-semibold drop-shadow-md text-sand-100 font-sans" style="font-size: clamp(1.0rem, 2.3vw, 1.3rem);">
                                     विमल सन्मति वर्षा योग समिति, निवाई (राज.)
                                 </p>
                             </div>
 
                             <div class="space-y-1">
-                                <span class="text-gold-400 font-bold uppercase tracking-wider font-sans block"
-                                    style="font-size: clamp(1.0rem, 2.2vw, 1.2rem);">
+                                <span class="text-gold-400 font-bold uppercase tracking-wider font-sans block" style="font-size: clamp(1.0rem, 2.2vw, 1.2rem);">
                                     निवेदक
                                 </span>
-                                <p class="font-semibold drop-shadow-md text-sand-100 font-sans"
-                                    style="font-size: clamp(1.0rem, 2.3vw, 1.3rem);">
+                                <p class="font-semibold drop-shadow-md text-sand-100 font-sans" style="font-size: clamp(1.0rem, 2.3vw, 1.3rem);">
                                     सकल दिगंबर जैन समाज, निवाई (राज.)
                                 </p>
                             </div>
 
                             <div class="space-y-2 pt-4 border-t border-gold-500/30">
-                                <span class="text-gold-400 font-bold tracking-wider font-sans block"
-                                    style="font-size: clamp(1.0rem, 2.2vw, 1.2rem);">
+                                <span class="text-gold-400 font-bold tracking-wider font-sans block" style="font-size: clamp(1.0rem, 2.2vw, 1.2rem);">
                                     Managed By
                                 </span>
-                                <p class="font-semibold drop-shadow-md text-sand-100 font-sans"
-                                    style="font-size: clamp(1.0rem, 2.3vw, 1.3rem);">
+                                <p class="font-semibold drop-shadow-md text-sand-100 font-sans" style="font-size: clamp(1.0rem, 2.3vw, 1.3rem);">
                                     team_sunder_lakshya
                                 </p>
                             </div>
@@ -1131,81 +998,81 @@
         </section>
     </div>
 
-    <!-- JAVASCRIPT FOR PERFORMANCE AND SMOOTH TRANSITIONS -->
+    <!-- JAVASCRIPT -->
     <script>
-            (() => {
-                const video = document.getElementById('introVideo');
-                const videoContainer = document.getElementById('videoContainer');
-                const openInviteBtn = document.getElementById('openInviteBtn');
-                const envelopeWrapper = document.getElementById('envelopeWrapper');
-                let isOpening = false;
+        (() => {
+            const video = document.getElementById('introVideo');
+            const videoContainer = document.getElementById('videoContainer');
+            const openInviteBtn = document.getElementById('openInviteBtn');
+            const envelopeWrapper = document.getElementById('envelopeWrapper');
+            let isOpening = false;
 
-                window.addEventListener('DOMContentLoaded', () => {
-                    if (video) {
-                        video.muted = true;
-                        video.play().catch(() => { });
-                    }
-                });
-
-                function startExperience() {
-                    if (isOpening) return;
-                    isOpening = true;
-                    if (video) {
-                        video.pause();
-                        video.currentTime = 0;
-                    }
-                    envelopeWrapper.classList.add('leaving');
-
-                    window.setTimeout(() => {
-                        envelopeWrapper.style.display = 'none';
-                    }, 500);
+            window.addEventListener('DOMContentLoaded', () => {
+                if (video) {
+                    video.muted = true;
+                    video.play().catch(() => { });
                 }
+            });
 
-                if (videoContainer) videoContainer.addEventListener('click', startExperience);
-                if (openInviteBtn) openInviteBtn.addEventListener('click', startExperience);
-
-                const targetDate = new Date('November 14, 2026 00:00:00').getTime();
-
-                function updateCountdown() {
-                    const now = new Date().getTime();
-                    const difference = targetDate - now;
-
-                    if (difference > 0) {
-                        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                        document.getElementById('days').innerText = String(days).padStart(2, '0');
-                        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-                        document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-                        document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-                    }
+            function startExperience() {
+                if (isOpening) return;
+                isOpening = true;
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
                 }
+                envelopeWrapper.classList.add('leaving');
 
-                setInterval(updateCountdown, 1000);
-                updateCountdown();
+                window.setTimeout(() => {
+                    envelopeWrapper.style.display = 'none';
+                }, 500);
+            }
 
-                let revealObserver;
-                function observeSections() {
-                    const sections = document.querySelectorAll('.reveal');
-                    if (!('IntersectionObserver' in window)) {
-                        sections.forEach(section => section.classList.add('visible'));
-                        return;
-                    }
-                    if (revealObserver) revealObserver.disconnect();
-                    revealObserver = new IntersectionObserver((entries, observer) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('visible');
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
-                    sections.forEach(section => revealObserver.observe(section));
+            if (videoContainer) videoContainer.addEventListener('click', startExperience);
+            if (openInviteBtn) openInviteBtn.addEventListener('click', startExperience);
+
+            const targetDate = new Date('November 14, 2026 00:00:00').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const difference = targetDate - now;
+
+                if (difference > 0) {
+                    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                    document.getElementById('days').innerText = String(days).padStart(2, '0');
+                    document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                    document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                    document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
                 }
-                observeSections();
-            })();
+            }
+
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+
+            let revealObserver;
+            function observeSections() {
+                const sections = document.querySelectorAll('.reveal');
+                if (!('IntersectionObserver' in window)) {
+                    sections.forEach(section => section.classList.add('visible'));
+                    return;
+                }
+                if (revealObserver) revealObserver.disconnect();
+                revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
+                sections.forEach(section => revealObserver.observe(section));
+            }
+            observeSections();
+        })();
 
         function addToCalendar(title, description, startTime, endTime) {
             const startFormatted = startTime.replace(/-|:|\.\d+/g, '');
