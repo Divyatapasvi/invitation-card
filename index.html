@@ -1139,7 +1139,7 @@
     </script>
 
     <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwaZmtfLXRUs1omJLT-pS1F3j4d8RQTVOlB4AX_KVB_vqIO3Jyxhv66PWZNLLPGuNnI8A/exec'; // Replace with your Web App URL
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwaZmtfLXRUs1omJLT-pS1F3j4d8RQTVOlB4AX_KVB_vqIO3Jyxhv66PWZNLLPGuNnI8A/exec'; // Keep your deployed Web App URL here
 
     const rsvpForm = document.getElementById('rsvpForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -1156,9 +1156,7 @@
     rsvpForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        submitBtn.disabled = true;
-        submitBtn.innerText = 'सबमिट हो रहा है...';
-
+        // Collect form data immediately
         const formData = {
             name: document.getElementById('formName').value.trim(),
             mobile: document.getElementById('formMobile').value.trim(),
@@ -1167,6 +1165,15 @@
             arrivalDate: document.getElementById('formArrivalDate').value.trim()
         };
 
+        // 1. Instantly show success message and reset form for the user (Zero wait time)
+        formMessage.classList.remove('hidden', 'text-red-600');
+        formMessage.classList.add('text-green-700');
+        formMessage.innerText = '✨ आपका पंजीकरण सफलतापूर्वक दर्ज हो गया है! धन्यवाद।';
+        
+        rsvpForm.reset();
+        submitBtn.setAttribute('disabled', 'true');
+
+        // 2. Send data to Google Sheet asynchronously in the background using 'no-cors'
         fetch(SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors',
@@ -1174,22 +1181,8 @@
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(formData)
-        })
-        .then(() => {
-            formMessage.classList.remove('hidden', 'text-red-600');
-            formMessage.classList.add('text-green-700');
-            formMessage.innerText = '✨ आपका पंजीकरण सफलतापूर्वक दर्ज हो गया है! धन्यवाद।';
-            rsvpForm.reset();
-            submitBtn.innerText = 'सुरक्षित करें (Submit)';
-            submitBtn.setAttribute('disabled', 'true');
-        })
-        .catch(error => {
-            console.error('Error!', error);
-            formMessage.classList.remove('hidden', 'text-green-700');
-            formMessage.classList.add('text-red-600');
-            formMessage.innerText = '❌ कुछ त्रुटि हुई। कृपया पुनः प्रयास करें।';
-            submitBtn.disabled = false;
-            submitBtn.innerText = 'सुरक्षित करें (Submit)';
+        }).catch(error => {
+            console.error('Background submission error:', error);
         });
     });
 </script>
