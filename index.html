@@ -264,10 +264,8 @@
         }
 
         .dynamic-logo {
-            width: clamp(70px, 15vw, 100px);
-            height: auto;
-            max-height: 100px;
-            object-print: contain;
+            width: 240px;
+            height: 240px;
             object-fit: contain;
         }
 
@@ -633,223 +631,224 @@
         </section>
 
         <!-- SECTION 2: 6 FRAMES -->
-    <section id="relief" class="relative pt-6 pb-24 bg-sand-100 text-stone-800 overflow-hidden reveal">
-        <div
-            class="absolute inset-0 opacity-5 bg-[radial-gradient(#854d0e_1px,transparent_1px)] [background-size:16px_16px]">
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 -mt-1 sm:-mt-8">
-                <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">||
-                    श्री सुन्दरसागराय नम: ||</span>
-                <h2 class="text-3xl sm:text-5xl font-bold text-crimson-950">
-                    दिव्य आयोजन के प्रमुख आकर्षण
-                </h2>
-                <div class="w-24 h-1 bg-gold-600 mx-auto rounded-full"></div>
+        <section id="relief" class="relative pt-6 pb-24 bg-sand-100 text-stone-800 overflow-hidden reveal">
+            <div
+                class="absolute inset-0 opacity-5 bg-[radial-gradient(#854d0e_1px,transparent_1px)] [background-size:16px_16px]">
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Frame 1 -->
-                <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
-                    <div class="frame-wrapper">
-                        <img src="f.webp" alt="फ्रेम १" class="frame-base-img" loading="lazy" width="400"
-                            height="500">
-                        <div class="frame-content">
-                            <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                width="240" height="240">
-                            <div class="space-y-1 my-auto">
-                                <h3 class="frame-heading no-underline">महामस्तकाभिषेक</h3>
-                                <h4 class="frame-heading text-base sm:text-lg block">मूलनायक शांतिनाथ भगवान पर</h4>
-                                <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A vessel of
-                                    blessings</p>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
-                                        नवंबर २०२६</span>
+            <div class="max-w-12xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-12xl mx-auto mb-16 space-y-4 -mt-1 sm:-mt-8">
+                    <span class="text-gold-700 uppercase text-base sm:text-lg font-bold tracking-widest font-sans">||
+                        श्री सुन्दरसागराय नम: ||</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-crimson-950">
+                        दिव्य आयोजन के प्रमुख आकर्षण
+                    </h2>
+                    <div class="w-24 h-1 bg-gold-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Frame 1 -->
+                    <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
+                        <div class="frame-wrapper">
+                            <img src="f.webp" alt="फ्रेम १" class="frame-base-img" loading="lazy" width="400"
+                                height="500">
+                            <div class="frame-content">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
+                                    width="240" height="240">
+                                <div class="space-y-1 my-auto">
+                                    <h3 class="frame-heading no-underline">महामस्तकाभिषेक</h3>
+                                    <h4 class="frame-heading text-lg sm:text-xl block">मूलनायक शांतिनाथ भगवान पर</h4>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A vessel of
+                                        blessings</p>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
+                                            नवंबर २०२६</span>
+                                    </div>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सुबह
+                                            ०7:०० बजे</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सुबह
-                                        ०7:०० बजे</span>
+                                <div class="w-full flex justify-center mb-9">
+                                    <button
+                                        onclick="addToCalendar('महामस्तकाभिषेक', 'A vessel of blessings', '2026-11-14T07:00:00', '2026-11-14T11:00:00')"
+                                        class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
+                                        <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="w-full flex justify-center mb-4">
-                                <button
-                                    onclick="addToCalendar('महामस्तकाभिषेक', 'A vessel of blessings', '2026-11-14T07:00:00', '2026-11-14T11:00:00')"
-                                    class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
-                                    <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
-                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Frame 2 -->
-                <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
-                    <div class="frame-wrapper">
-                        <img src="f.webp" alt="फ्रेम २" class="frame-base-img" loading="lazy" width="400"
-                            height="500">
-                        <div class="frame-content">
-                            <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                width="240" height="240">
-                            <div class="space-y-1 my-auto">
-                                <h2 class="frame-heading no-underline">तपस्वी सम्राट आचार्य श्री</h2>
-                                <h3 class="frame-heading text-base sm:text-lg block">सन्मति सागर जी विधान</h3>
-                                <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">Lets start
-                                    with blessings of guru</p>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
-                                        नवंबर २०२६</span>
+                    <!-- Frame 2 -->
+                    <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
+                        <div class="frame-wrapper">
+                            <img src="f.webp" alt="फ्रेम २" class="frame-base-img" loading="lazy" width="400"
+                                height="500">
+                            <div class="frame-content">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
+                                    width="240" height="240">
+                                <div class="space-y-1 my-auto">
+                                    <h2 class="frame-heading no-underline">तपस्वी सम्राट आचार्य श्री</h2>
+                                    <h3 class="frame-heading text-lg sm:text-xl block">सन्मति सागर जी विधान</h3>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">Lets start
+                                        with blessings of guru</p>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
+                                            नवंबर २०२६</span>
+                                    </div>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> दोपहर
+                                            01:00 बजे</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> दोपहर
-                                        01:00 बजे</span>
+                                <div class="w-full flex justify-center mb-9">
+                                    <button
+                                        onclick="addToCalendar('सन्मति सागर विधान', 'Lets start with blessings of guru', '2026-11-14T13:00:00', '2026-11-14T16:00:00')"
+                                        class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
+                                        <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="w-full flex justify-center mb-4">
-                                <button
-                                    onclick="addToCalendar('सन्मति सागर विधान', 'Lets start with blessings of guru', '2026-11-14T13:00:00', '2026-11-14T16:00:00')"
-                                    class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
-                                    <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
-                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Frame 3 -->
-                <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
-                    <div class="frame-wrapper">
-                        <img src="f.webp" alt="फ्रेम ३" class="frame-base-img" loading="lazy" width="400"
-                            height="500">
-                        <div class="frame-content">
-                            <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                width="240" height="240">
-                            <div class="space-y-1 my-auto">
-                                <div class="py-2">
-                                    <img src="ratnatray.PNG" style="max-width: 120px; width: 100%; height: auto; margin: 0 auto;"
-                                        alt="रत्नत्रय आराधना" loading="lazy" width="180" height="120">
+                    <!-- Frame 3 -->
+                    <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
+                        <div class="frame-wrapper">
+                            <img src="f.webp" alt="फ्रेम ३" class="frame-base-img" loading="lazy" width="400"
+                                height="500">
+                            <div class="frame-content">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
+                                    width="240" height="240">
+                                <div class="space-y-1 my-auto">
+                                    <div class="py-2">
+                                        <img src="ratnatray.PNG" style="width: 180px; height: auto; margin: 0 auto;"
+                                            alt="रत्नत्रय आराधना" loading="lazy" width="180" height="120">
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A night to
+                                        remember</p>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
+                                            नवंबर २०२६</span>
+                                    </div>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> शाम ०७:००
+                                            बजे</span>
+                                    </div>
                                 </div>
-                                <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">A night to
-                                    remember</p>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> १४
-                                        नवंबर २०२६</span>
+                                <div class="w-full flex justify-center mb-9">
+                                    <button
+                                        onclick="addToCalendar('रत्नत्रय आराधना / सांस्कृतिक संध्या', 'A night to remember', '2026-11-14T19:00:00', '2026-11-14T21:30:00')"
+                                        class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
+                                        <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
+                                    </button>
                                 </div>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> शाम ०७:००
-                                        बजे</span>
-                                </div>
-                            </div>
-                            <div class="w-full flex justify-center mb-4">
-                                <button
-                                    onclick="addToCalendar('रत्नत्रय आराधना / सांस्कृतिक संध्या', 'A night to remember', '2026-11-14T19:00:00', '2026-11-14T21:30:00')"
-                                    class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
-                                    <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
-                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Frame 4 -->
-                <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
-                    <div class="frame-wrapper">
-                        <img src="f.webp" alt="फ्रेम ४" class="frame-base-img" loading="lazy" width="400"
-                            height="500">
-                        <div class="frame-content">
-                            <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                width="240" height="240">
-                            <div class="space-y-1 my-auto">
-                                <h3 class="frame-heading no-underline text-sm sm:text-base">दिव्य तपस्वी आचार्य श्री <br>सुन्दर सागर जी विधान</h3>
-                                <h1 class="frame-heading text-xl sm:text-2xl block">108 मंडलो के साथ</h1>
-                                <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">The morning
-                                    of forever</p>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> 15
-                                        नवंबर २०२६</span>
+                    <!-- Frame 4 -->
+                    <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
+                        <div class="frame-wrapper">
+                            <img src="f.webp" alt="फ्रेम ४" class="frame-base-img" loading="lazy" width="400"
+                                height="500">
+                            <div class="frame-content">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
+                                    width="240" height="240">
+                                <div class="space-y-1 my-auto">
+                                    <h3 class="frame-heading no-underline">दिव्य तपस्वी आचार्य श्री <br>सुन्दर सागर जी
+                                        विधान</h3>
+                                    <h1 class="frame-heading text-2xl sm:text-3xl block">108 मंडलो के साथ</h1>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">The morning
+                                        of forever</p>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> 15
+                                            नवंबर २०२६</span>
+                                    </div>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> प्रातः
+                                            07:00 बजे</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> प्रातः
-                                        07:00 बजे</span>
+                                <div class="w-full flex justify-center mb-9">
+                                    <button
+                                        onclick="addToCalendar('आचार्य सुन्दर सागर विधान', 'The morning of forever', '2026-11-15T07:00:00', '2026-11-15T11:00:00')"
+                                        class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
+                                        <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="w-full flex justify-center mb-4">
-                                <button
-                                    onclick="addToCalendar('आचार्य सुन्दर सागर विधान', 'The morning of forever', '2026-11-15T07:00:00', '2026-11-15T11:00:00')"
-                                    class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
-                                    <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
-                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Frame 5 -->
-                <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
-                    <div class="frame-wrapper">
-                        <img src="f.webp" alt="फ्रेम ५" class="frame-base-img" loading="lazy" width="400"
-                            height="500">
-                        <div class="frame-content">
-                            <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                width="240" height="240">
-                            <div class="space-y-1 my-auto">
-                                <h3 class="frame-heading">दिव्य जन्मोत्सव</h3>
-                                <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">Moments we
-                                    hold close</p>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> 15
-                                        नवंबर २०२६</span>
+                    <!-- Frame 5 -->
+                    <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
+                        <div class="frame-wrapper">
+                            <img src="f.webp" alt="फ्रेम ५" class="frame-base-img" loading="lazy" width="400"
+                                height="500">
+                            <div class="frame-content">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
+                                    width="240" height="240">
+                                <div class="space-y-1 my-auto">
+                                    <h3 class="frame-heading">दिव्य जन्मोत्सव</h3>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">Moments we
+                                        hold close</p>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> 15
+                                            नवंबर २०२६</span>
+                                    </div>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> दोपहर
+                                            01:00 बजे</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> दोपहर
-                                        01:00 बजे</span>
+                                <div class="w-full flex justify-center mb-9">
+                                    <button
+                                        onclick="addToCalendar('दिव्य जन्मोत्सव', 'Moments we hold close', '2026-11-15T13:00:00', '2026-11-15T16:00:00')"
+                                        class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
+                                        <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="w-full flex justify-center mb-4">
-                                <button
-                                    onclick="addToCalendar('दिव्य जन्मोत्सव', 'Moments we hold close', '2026-11-15T13:00:00', '2026-11-15T16:00:00')"
-                                    class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
-                                    <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
-                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Frame 6 -->
-                <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
-                    <div class="frame-wrapper">
-                        <img src="f.webp" alt="फ्रेम ६" class="frame-base-img" loading="lazy" width="400"
-                            height="500">
-                        <div class="frame-content">
-                            <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
-                                width="240" height="240">
-                            <div class="space-y-1 my-auto">
-                                <h3 class="frame-heading">एक शाम सुन्दर गुरु के नाम</h3>
-                                <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">An Evening
-                                    filled of Devotion</p>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> 15
-                                        नवंबर २०२६</span>
+                    <!-- Frame 6 -->
+                    <div class="relief-card p-4 rounded-2xl overflow-hidden shadow-md">
+                        <div class="frame-wrapper">
+                            <img src="f.webp" alt="फ्रेम ६" class="frame-base-img" loading="lazy" width="400"
+                                height="500">
+                            <div class="frame-content">
+                                <img src="logo.svg" alt="लोगो" class="dynamic-logo drop-shadow-md my-1" loading="lazy"
+                                    width="240" height="240">
+                                <div class="space-y-1 my-auto">
+                                    <h3 class="frame-heading">एक शाम सुन्दर गुरु के नाम</h3>
+                                    <p class="text-xs sm:text-sm text-stone-700 font-medium font-sans mt-1">An Evening
+                                        filled of Devotion</p>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-calendar"></i> 15
+                                            नवंबर २०२६</span>
+                                    </div>
+                                    <div>
+                                        <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सायं
+                                            07:00 बजे</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span class="frame-datetime-badge"><i class="fa-regular fa-clock"></i> सायं
-                                        07:00 बजे</span>
+                                <div class="w-full flex justify-center mb-9">
+                                    <button
+                                        onclick="addToCalendar('एक शाम सुन्दर गुरु के नाम', 'An Evening filled of Devotion', '2026-11-15T19:00:00', '2026-11-15T21:30:00')"
+                                        class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
+                                        <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="w-full flex justify-center mb-4">
-                                <button
-                                    onclick="addToCalendar('एक शाम सुन्दर गुरु के नाम', 'An Evening filled of Devotion', '2026-11-15T19:00:00', '2026-11-15T21:30:00')"
-                                    class="w-3/4 py-2 px-3 bg-gradient-to-r from-gold-600 to-gold-500 text-crimson-950 font-bold rounded-xl shadow-md hover:from-gold-500 hover:to-gold-600 transition flex items-center justify-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider font-sans cursor-pointer">
-                                    <i class="fa-solid fa-calendar-days"></i> कैलेंडर में जोड़ें
-                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
         <!-- Moving Ticker Container -->
         <section id="gopuram" class="relative bg-crimson-950 text-sand-100 py-12 overflow-hidden reveal">
