@@ -82,8 +82,6 @@
         }
 
         /* --- LUXURY TYPOGRAPHY HIERARCHY --- */
-        
-        /* Main Structural Headings: Rozha One (Royal High-Contrast Devanagari) + Marcellus */
         h1, h2, h3, h4, h5, h6, .frame-heading {
             font-family: var(--font-heading) !important;
             letter-spacing: normal !important;
@@ -91,7 +89,6 @@
             line-height: 1.35;
         }
 
-        /* Editorial Body Copy: Noto Serif Devanagari + Cormorant */
         p.editorial-body {
             font-family: var(--font-editorial) !important;
             font-size: clamp(1.12rem, 1.9vw, 1.28rem);
@@ -101,7 +98,6 @@
             letter-spacing: normal !important;
         }
 
-        /* Calligraphic Accents: Great Vibes */
         .script-accent {
             font-family: var(--font-script) !important;
             font-size: clamp(1.4rem, 2.5vw, 1.7rem);
@@ -111,20 +107,17 @@
             font-weight: 400;
         }
 
-        /* Royal Kicker Badges: Yatra One + Cinzel Decorative */
         .royal-kicker {
             font-family: var(--font-display) !important;
             letter-spacing: normal !important;
             font-weight: 400;
         }
 
-        /* Clean UI Elements: Jost + Hind */
         button, input, label, .ui-text {
             font-family: var(--font-ui) !important;
             letter-spacing: normal !important;
         }
 
-        /* Utility Font Classes */
         .font-cinzel-decorative { font-family: var(--font-display) !important; }
         .font-great-vibes { font-family: var(--font-script) !important; }
         .font-cormorant { font-family: var(--font-editorial) !important; }
@@ -145,7 +138,6 @@
             box-shadow: 0 0 60px 15px rgba(249, 228, 152, 0.85);
         }
 
-        /* Pop-in / Pop-out Breathing Keyframes */
         @keyframes gatewayBreathe {
             0%, 100% {
                 transform: translateX(-50%) translateY(-50%) scale(1);
@@ -444,7 +436,8 @@
         .social-links-container {
             display: flex;
             gap: 24px;
-            margin-bottom: 0;
+            margin-top: 2rem;
+            margin-bottom: 2.5rem;
             position: relative;
             z-index: 10;
             flex-wrap: wrap;
@@ -478,12 +471,12 @@
         .neu-social-btn.facebook:hover { color: #1877F2; }
 
         @media (max-width: 640px) {
-            .footer-card-position { top: 10% !important; }
+            .footer-card-position { top: 6% !important; }
             .footer-card-box { max-width: 280px !important; min-height: 480px !important; padding: 1.5rem !important; }
         }
 
         @media (min-width: 641px) and (max-width: 1024px) {
-            .footer-card-position { top: 15% !important; }
+            .footer-card-position { top: 10% !important; }
             .footer-card-box { min-height: 550px !important; }
         }
     </style>
@@ -493,7 +486,8 @@
 
     <!-- SCREEN 1: THE ROYAL GATEWAY (Intro Overlay) -->
     <main class="rgw-root relative isolate min-h-screen overflow-x-clip font-cormorant" id="gateway-screen">
-        <div id="gateway-wrapper" class="fixed inset-0 z-50 overflow-hidden bg-[#080e2c] [container-type:size]">
+        <!-- FIXED 1: Height using dynamic viewport units (100dvh) to prevent mobile browser bottom bar overflow/line -->
+        <div id="gateway-wrapper" class="fixed inset-0 h-[100dvh] z-50 overflow-hidden bg-[#080e2c] [container-type:size]">
             
             <div id="scene-container" class="absolute left-1/2 top-1/2" style="width:max(100cqw, calc(100cqh * 1.7768331562167907));aspect-ratio:1.7768331562167907;transform-origin:50.12% 69.18%;perspective:1400px;perspective-origin:50.12% 69.18%;opacity:0;transform:translateX(-50%) translateY(-50%) scale(1.12)">
                 
@@ -541,9 +535,9 @@
 
             <button id="open-gate-btn" type="button" aria-label="Open the palace gates" class="absolute inset-0 h-full w-full cursor-pointer"></button>
 
-            <div class="pointer-events-none absolute inset-x-0 bottom-0 flex flex-col items-center gap-3 bg-gradient-to-t from-[#080e2c]/95 via-[#080e2c]/60 to-transparent px-6 pb-10 pt-28 text-center text-[#fbedd1]">
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 flex flex-col items-center gap-3 bg-gradient-to-t from-[#080e2c]/95 via-[#080e2c]/60 to-transparent px-6 pb-6 pt-28 text-center text-[#fbedd1]">
                 <p id="title-sub" class="bottom-title-item font-cinzel-decorative text-sm sm:text-base font-normal tracking-[0.08em] text-[#F9E498]" style="opacity:0;transform:translateY(30px)">|| सूरी आदि महावीरकीर्ति विमल सन्मति सुंदर सागराय नमः ||</p>
-                <p id="title-main" class="bottom-title-item font-marcellus text-4xl sm:text-5xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] md:text-6xl text-[#FFFDF9]" style="opacity:0;transform:translateY(30px)">श्री १०८ सुंदर सागर जी महाराज</p>
+                <p id="title-main" class="bottom-title-item font-marcellus text-3xl sm:text-4xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] md:text-5xl text-[#FFFDF9]" style="opacity:0;transform:translateY(30px)">श्री १०८ सुंदर सागर जी महाराज</p>
             </div>
         </div>
     </main>
@@ -1019,11 +1013,12 @@
         </section>
 
        <!-- SECTION 6: Bottom Image Layer -->
-        <section class="image-layer reveal relative">
-            <img src="d.png" alt="Footer Background" loading="lazy" width="1200" height="900" class="w-full h-auto block">
+        <section class="image-layer reveal relative bg-crimson-950 overflow-hidden">
+            <!-- FIXED 2: Added proper block styling and height wrapper to show background image clearly without clipping or bottom maroon line -->
+            <img src="d.png" alt="Footer Background" loading="lazy" width="1200" height="900" class="w-full h-auto block object-cover min-h-[900px] opacity-90">
 
-            <div class="absolute z-10 w-full flex flex-col items-center pointer-events-auto px-4 footer-card-position" style="top: 25%;">
-                <!-- 6th Layer Card with Border Color Matching Social Media Logos (#4A040E) -->
+            <div class="absolute inset-0 z-10 w-full flex flex-col items-center justify-between pointer-events-auto px-4 footer-card-position pt-6 pb-12" style="top: 12%;">
+                <!-- 6th Layer Card -->
                 <div class="w-full max-w-sm sm:max-w-md backdrop-blur-md border-[3.5px] border-[#4A040E] rounded-3xl p-6 sm:p-10 text-center flex flex-col justify-between relative footer-card-box"
                     style="min-height: 680px; background: linear-gradient(160deg, rgba(253, 251, 247, 0.90) 0%, rgba(242, 230, 206, 0.94) 100%); box-shadow: 0 25px 50px rgba(42, 1, 6, 0.45), inset 0 2px 15px rgba(255, 255, 255, 0.8);">
 
@@ -1074,7 +1069,8 @@
                     </div>
                 </div>
 
-                <div class="social-links-container mt-6">
+                <!-- FIXED 3: Added spacing above and padding below so social media logos do not touch the screen edge -->
+                <div class="social-links-container">
                     <a href="https://chat.whatsapp.com/Hmr6po6YXD0LbPHqNb6bgj" target="_blank" class="neu-social-btn whatsapp" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
@@ -1094,7 +1090,6 @@
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Gateway Interaction and Transition Script
         window.addEventListener('DOMContentLoaded', () => {
             const sceneContainer = document.getElementById('scene-container');
             const tapPrompt = document.getElementById('tap-prompt');
@@ -1122,7 +1117,6 @@
                 if (isOpening) return;
                 isOpening = true;
 
-                // Lock current computed transform before stopping the breathing animation so there is zero jump
                 const currentTransform = window.getComputedStyle(sceneContainer).transform;
                 if (currentTransform && currentTransform !== 'none') {
                     sceneContainer.style.transform = currentTransform;
@@ -1147,7 +1141,6 @@
                     warmFlash.classList.add('flash-in');
                 }, 1550);
 
-                // Reveal Main Invitation and Remove Gateway overlay after zoom/flash completes
                 setTimeout(() => {
                     gatewayScreen.style.display = 'none';
                     mainInvite.classList.remove('hidden');
@@ -1159,7 +1152,6 @@
             });
         });
 
-        // Countdown Timer
         const targetDate = new Date('November 14, 2026 00:00:00').getTime();
 
         function updateCountdown() {
@@ -1182,7 +1174,6 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Intersection Observer for Animations
         let revealObserver;
         function observeSections() {
             const sections = document.querySelectorAll('.reveal');
@@ -1202,7 +1193,6 @@
             sections.forEach(section => revealObserver.observe(section));
         }
 
-        // Calendar Add Function
         function addToCalendar(title, description, startTime, endTime) {
             const startFormatted = startTime.replace(/-|:|\.\d+/g, '');
             const endFormatted = endTime.replace(/-|:|\.\d+/g, '');
