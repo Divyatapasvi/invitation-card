@@ -250,6 +250,21 @@
         }
         .dust-particle { animation: floatDust linear infinite; }
 
+        /* --- SCROLL DOWN INDICATOR STYLES --- */
+        @keyframes customBounce {
+            0%, 100% {
+                transform: translateY(0);
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+                transform: translateY(10px);
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+        .scroll-indicator-bounce {
+            animation: customBounce 1.8s infinite;
+        }
+
         /* --- WEBSITE CONTENT STYLES --- */
         .relief-card {
             background: linear-gradient(135deg, #FDFBF7 0%, #F2E8D5 100%);
@@ -567,6 +582,18 @@
             <div class="frame-container">
                 <img src="a.webp" alt="आचार्य श्री आमंत्रण" class="frame-image" width="1200" height="800" fetchpriority="high">
             </div>
+
+            <!-- Scroll Down Indicator with Message "Nice scroll kare" (नीचे स्क्रॉल करें) -->
+            <div class="absolute bottom-6 left-0 right-0 z-20 flex justify-center pointer-events-auto">
+                <a href="#history" aria-label="Nice scroll kare" class="group flex flex-col items-center gap-2 cursor-pointer transition-all duration-300 hover:scale-105">
+                    <span class="px-4 py-1.5 rounded-full bg-[#4A040E]/85 backdrop-blur-md border border-gold-500 text-gold-300 text-xs sm:text-sm font-semibold tracking-wide shadow-lg font-jost">
+                        <span class="text-white font-normal ml-1">स्क्रॉल करें</span>
+                    </span>
+                    <div class="w-9 h-9 rounded-full bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 text-crimson-950 flex items-center justify-center shadow-lg scroll-indicator-bounce border border-white/30">
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </div>
+                </a>
+            </div>
         </section>
 
         <!-- SECTION 3: Architectural History & Heritage Story -->
@@ -583,7 +610,7 @@
                             दिव्य तप और त्याग की मूर्ति, आचार्य श्री १०८ सुंदर सागर जी महाराज जैन धर्म के महान संत हैं।
                             उनका पावन जीवन संयम, साधना और आत्मकल्याण का अनुपम संदेश देता है।
                             उनके अमृतमयी वचन जीवन को धर्म और सदाचार के मार्ग पर चलने की प्रेरणा देते हैं।
-                            उनका त्यागमय जीवन युवाओं में संस्कार, समर्पण और सेवा की भावना जागृत करता है।
+                            उनका त्यागमय जीवन युवाओं में संस्कार, समर्पण और सेवा की भावना जागृत करते हैं।
                             ऐसे दिव्य तपस्वी गुरुदेव के श्रीचरणों में कोटि-कोटि नमोस्तु ||
                         </p>
 
